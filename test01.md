@@ -1,1 +1,0 @@
-# shimaguti pc
