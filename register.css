@@ -1,0 +1,145 @@
+/* common section */
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* transition: all 0.4s ease; */
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Zen Antique", serif;
+}
+
+section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-right: 120px;
+    padding-left: 120px;
+}
+
+h2,
+h3 {
+    position: relative;
+    z-index: 1;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+
+p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    letter-spacing: 0.1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* register.html用CSS */
+.register {
+    font-size: 2rem;
+}
+
+.register .container {
+    border: 1px solid #ccc;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.register .register-title {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.register form {
+    padding: 2.5rem;
+}
+
+.register form input {
+    width: 100%;
+    padding: 1rem 1rem;
+}
+
+.register form div {
+    margin-bottom: 1.8rem;
+}
+
+.register .dm {
+    width: auto;
+    padding: 0;
+}
+
+.register .select-value {
+    font-size: 1.6rem;
+    padding-left: 1rem;
+}
+
+/* regi_conf.html用CSS */
+.regi-conf p {
+    font-size: 1.6rem;
+    font-weight: bold;
+
+}
+.regi-conf .container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.regi-conf .register-title {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.regi-conf .confirm {
+    background: #ccc;
+    margin-top: 2rem;
+    padding: 4rem;
+}
+
+.regi-conf .confirm-group {
+    margin-bottom: 2rem;
+}
+
+.regi-conf h4 {
+    text-align: center;
+}
+
+.regi-conf .confirm-submit {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.regi-conf .confirm-submit button {
+    all: unset;
+    background: rgb(85, 85, 85);
+    color: #fff;
+    font-size: 2rem;
+    margin-top: 2rem;
+    padding: 1.2rem;
+    border-radius: 0.4rem;
+    width: 40%;
+    cursor: pointer;
+}
