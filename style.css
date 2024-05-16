@@ -276,6 +276,37 @@ header .book-open-btn.active {
   border-radius: 4px;
 }
 
+.news {
+  display: flex;
+}
+
+.news img {
+  width: 300px;
+}
+
+.news dl {
+  padding: 20px;
+  line-height: 1.6;
+  font-size: 20px;
+}
+
+.news2 {
+  display: flex;
+}
+
+.news2 img {
+  width: 300px;
+}
+
+.news2 dl {
+  padding: 20px;
+  line-height: 1.6;
+  font-size: 20px;
+}
+.reverse {
+  flex-direction: row-reverse;
+}
+
 .contact {
   background-image: url();
   background: #444;
