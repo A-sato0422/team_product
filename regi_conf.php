@@ -13,7 +13,6 @@ $dm = e($_POST['dm'] ?? '');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="register.css">
     <link rel="stylesheet" href="./register.css">
     <title>登録内容確認 | 地酒.com</title>
 </head>
@@ -25,32 +24,37 @@ $dm = e($_POST['dm'] ?? '');
                 <h4>登録内容確認</h4>
             </div>
 
-            <div class="confirm">
+            <form class="confirm" method="POST" action="regi_end.php" >
                 <div class="confirm-group">
                     <p>お名前 *</p>
                     <p><?= $name; ?></p>
+                    <input type="hidden" name="name" value="<?= $name; ?>">
                 </div>
                 <div class="confirm-group">
                     <p>Email *</p>
                     <p><?= $email; ?></p>
+                    <input type="hidden" name="email" value="<?= $email; ?>">
                 </div>
                 <div class="confirm-group">
                     <p>パスワード *</p>
                     <p><?= $password; ?></p>
+                    <input type="hidden" name="password" value="<?= $password; ?>">
                 </div>
                 <div class="confirm-group">
                     <p>住所 *</p>
                     <p><?= $address; ?></p>
+                    <input type="hidden" name="address" value="<?= $address; ?>">
                 </div>
                 <div class="confirm-group">
                     <p>SQUAREからのお知らせを受信しますか？</p>
                     <p><?= $dm; ?></p>
+                    <input type="hidden" name="dm" value="<?= $dm; ?>">
                 </div>
                 <div class="confirm-submit">
                     <p>この内容で送信してもよろしいですか？</p>
-                    <button>送信する</button>
+                    <input class="btn-submit" type="submit" value="送信する">
                 </div>
-            </div>
+            </form>
         </div>
     </section>
     

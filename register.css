@@ -97,7 +97,7 @@ img {
     padding-left: 1rem;
 }
 
-/* regi_conf.html用CSS */
+/* regi_conf.php用CSS */
 .regi-conf p {
     font-size: 1.6rem;
     font-weight: bold;
@@ -132,7 +132,8 @@ img {
     text-align: center;
 }
 
-.regi-conf .confirm-submit button {
+.btn-submit,
+.btn-top {
     all: unset;
     background: rgb(85, 85, 85);
     color: #fff;
@@ -142,4 +143,13 @@ img {
     border-radius: 0.4rem;
     width: 40%;
     cursor: pointer;
+}
+
+/* regi_end.php用CSS */
+.regi-end .container {
+    width: 60%;
+    margin: 0 auto;
+    background: #ccc;
+    padding: 4rem 5rem;
+    text-align: center;
 }
