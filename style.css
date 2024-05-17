@@ -366,7 +366,6 @@ footer a:hover {
 }
 
 /* media */
-
 @media (max-width: 1024px) {
   .hero .hero-title h2 {
     font-size: 7rem;
