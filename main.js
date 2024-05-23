@@ -1,32 +1,36 @@
 'use strict';
 {
-    // menu-bar
-    const bookCloseNav = document.querySelector('.book-close-btn');
-    const bookOpenNav = document.querySelector('.book-open-btn');
-    const menuBar = document.querySelector('.menu-bar');
+    // scroll up UI
+    window.addEventListener('scroll', function () {
+        // スクロール量を取得
+        const scroll = window.scrollY;
+        // 画面の高さを取得
+        const windowHeight = window.innerHeight;
+        // すべての.boxを取得
+        const boxes = document.querySelectorAll('.box');
 
-    bookCloseNav.addEventListener('click', () => {
-        menuBar.classList.toggle('active');
-        bookCloseNav.classList.toggle('active');
-        bookOpenNav.classList.toggle('active');
-    });
+        boxes.forEach(function (box) {
+            // boxまでの高さを取得
+            const distanceToBox = box.offsetTop;
 
-    bookOpenNav.addEventListener('click', () => {
-        menuBar.classList.toggle('active');
-        bookCloseNav.classList.toggle('active');
-        bookOpenNav.classList.toggle('active');
-    });
-
-    // carousel effect
-    $(function () {
-        $(".slide-items").slick({
-            autoplay: true,
-            autoplaySpeed: 2000,
-            infinite: true,
-            fade: true,
-            cssEase: 'linear',
-            speed: 600,
-            arrows: true
+            // 下記条件が成り立つときだけboxにis-activeクラスを付与する
+            if (distanceToBox - scroll < windowHeight * 0.8) {
+                box.classList.add('is-active');
+            }
         });
+    });
+
+
+
+    //アコーディオンをクリックした時の動作
+    $('.title').on('click', function () {//タイトル要素をクリックしたら
+        const findElm = $(this).next(".search-content");//直後のアコーディオンを行うエリアを取得し
+        $(findElm).slideToggle();//アコーディオンの上下動作
+
+        if ($(this).hasClass('close')) {//タイトル要素にクラス名closeがあれば
+            $(this).removeClass('close');//クラス名を除去し
+        } else {//それ以外は
+            $(this).addClass('close');//クラス名closeを付与
+        }
     });
 }
