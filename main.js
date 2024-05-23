@@ -1,35 +1,36 @@
 'use strict';
 {
-    //loading機能 
+    // scroll up UI
+    window.addEventListener('scroll', function () {
+        // スクロール量を取得
+        const scroll = window.scrollY;
+        // 画面の高さを取得
+        const windowHeight = window.innerHeight;
+        // すべての.boxを取得
+        const boxes = document.querySelectorAll('.box');
 
-    //テキストのカウントアップ+バーの設定
-    const bar = new ProgressBar.Line(splash_text, {//id名を指定
-        easing: 'easeInOut',//アニメーション効果linear、easeIn、easeOut、easeInOutが指定可能
-        duration: 1000,//時間指定(1000＝1秒)
-        strokeWidth: 0.5,//進捗ゲージの太さ
-        color: '#222',//進捗ゲージのカラー
-        trailWidth: 0.5,//ゲージベースの線の太さ
-        trailColor: '#fff',//ゲージベースの線のカラー
-        text: {//テキストの形状を直接指定       
-            style: {//天地中央に配置
-                position: 'absolute',
-                left: '50%',
-                top: '50%',
-                padding: '0',
-                margin: '-30px 0 0 0',//バーより上に配置
-                transform: 'translate(-50%,-50%)',
-                'font-size': '2rem',
-                color: '#000',
-            },
-            autoStyleContainer: false //自動付与のスタイルを切る
-        },
-        step: function (state, bar) {
-            bar.setText(Math.round(bar.value() * 100) + ' %'); //テキストの数値
-        }
+        boxes.forEach(function (box) {
+            // boxまでの高さを取得
+            const distanceToBox = box.offsetTop;
+
+            // 下記条件が成り立つときだけboxにis-activeクラスを付与する
+            if (distanceToBox - scroll < windowHeight * 0.8) {
+                box.classList.add('is-active');
+            }
+        });
     });
 
-    //アニメーションスタート
-    bar.animate(1.0, function () {//バーを描画する割合を指定します 1.0 なら100%まで描画します
-        $("#splash").delay(200).fadeOut(400);//アニメーションが終わったら#splashエリアをフェードアウト
+
+
+    //アコーディオンをクリックした時の動作
+    $('.title').on('click', function () {//タイトル要素をクリックしたら
+        const findElm = $(this).next(".search-content");//直後のアコーディオンを行うエリアを取得し
+        $(findElm).slideToggle();//アコーディオンの上下動作
+
+        if ($(this).hasClass('close')) {//タイトル要素にクラス名closeがあれば
+            $(this).removeClass('close');//クラス名を除去し
+        } else {//それ以外は
+            $(this).addClass('close');//クラス名closeを付与
+        }
     });
 }

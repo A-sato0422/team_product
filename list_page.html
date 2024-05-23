@@ -39,61 +39,56 @@
 
         <div class="main-contents">
             <div class="search-field">
-                <div>
-                    <div class="search-box">
-                        <div>
-                            <h3>産地</h3>
-                            <button>-</button>
-                        </div>
-                        <ul>
-                            <li><input type="checkbox" id="gunma"><label for="gunma">群馬県</label></li>
-                            <li><input type="checkbox" id="ishikawa"><label for="ishikawa">石川</label></li>
-                            <li><input type="checkbox" id="toyama"><label for="toyama">富山</label></li>
-                            <li><input type="checkbox" id="hukui"><label for="hukui">福井</label></li>
-                        </ul>
-                    </div>
-                    <div class="search-box">
-                        <div>
-                            <h3>酒蔵</h3>
-                            <button>-</button>
-                        </div>
-                        <ul>
-                            <li><input type="checkbox" id="nagata"><label for="nagata">永井酒造</label></li>
-                            <li><input type="checkbox" id="toyota"><label for="toyota">豊田酒造</label></li>
-                            <li><input type="checkbox" id="aoki"><label for="aoki">青木酒造</label></li>
-                        </ul>
-                    </div>
-                    <div class="search-box">
-                        <div>
-                            <h3>銘柄</h3>
-                            <button>-</button>
-                        </div>
-                        <ul>
-                            <li><input type="checkbox" id="tanigawa"><label for="tanigawa">谷川岳</label></li>
-                        </ul>
-                    </div>
-                    <div class="search-box">
-                        <div>
-                            <h3>仕様</h3>
-                            <button>-</button>
-                        </div>
-                        <ul>
-                            <li><input type="checkbox" id="bottle"><label for="bottle">ボトルのみ</label></li>
-                        </ul>
-                    </div>
-                    <div class="search-box">
-                        <div>
-                            <h3>価格</h3>
-                            <button>-</button>
-                        </div>
-                        <ul>
-                            <li><input type="checkbox" id="5000"><label for="5000">~￥5,000</label></li>
-                            <li><input type="checkbox" id="10000"><label for="10000">￥5,000~￥10,000</label></li>
-                            <li><input type="checkbox" id="15000"><label for="15000">￥10,000~￥15,000</label></li>
-                            <li><input type="checkbox" id="20000"><label for="20000">￥15,000~￥20,000</label></li>
-                        </ul>
-                    </div>
-                </div>
+                <ul class="accordion-area">
+                    <li>
+                        <section>
+                            <h3 class="title">産地</h3>
+                            <ul class="search-content">
+                                <li><input type="checkbox" id="gunma"><label for="gunma">群馬県</label></li>
+                                <li><input type="checkbox" id="ishikawa"><label for="ishikawa">石川</label></li>
+                                <li><input type="checkbox" id="toyama"><label for="toyama">富山</label></li>
+                                <li><input type="checkbox" id="hukui"><label for="hukui">福井</label></li>
+                            </ul>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <h3 class="title">酒造</h3>
+                            <ul class="search-content">
+                                <li><input type="checkbox" id="nagata"><label for="nagata">永井酒造</label></li>
+                                <li><input type="checkbox" id="toyota"><label for="toyota">豊田酒造</label></li>
+                                <li><input type="checkbox" id="aoki"><label for="aoki">青木酒造</label></li>
+                            </ul>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <h3 class="title">銘柄</h3>
+                            <ul class="search-content">
+                                <li><input type="checkbox" id="tanigawa"><label for="tanigawa">谷川岳</label></li>
+                            </ul>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <h3 class="title">仕様</h3>
+                            <ul class="search-content">
+                                <li><input type="checkbox" id="bottle"><label for="bottle">ボトルのみ</label></li>
+                            </ul>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <h3 class="title">価格</h3>
+                            <ul class="search-content">
+                                <li><input type="checkbox" id="5000"><label for="5000">~￥5,000</label></li>
+                                <li><input type="checkbox" id="10000"><label for="10000">￥5,000~￥10,000</label></li>
+                                <li><input type="checkbox" id="15000"><label for="15000">￥10,000~￥15,000</label></li>
+                                <li><input type="checkbox" id="20000"><label for="20000">￥15,000~￥20,000</label></li>
+                            </ul>
+                        </section>
+                    </li>
+                </ul>
                 <div class="search-btn">
                     <button class="btn">この条件で検索する</button>
                 </div>
@@ -111,8 +106,6 @@
                             </div>
                         </a>
                         <a href="#" class="box w-full h-full relative transition-all duration-700 overflow-hidden">
-
-
                             <img src="./products/sake01.webp" alt="日本酒①の画像"
                                 class="w-full h-72 rounded-md object-cover cursor-pointer">
                             <div>
@@ -209,10 +202,19 @@
                 </div>
                 <div class="paging">
                     <ul>
-                        <li class="page-active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
+                        <a href="#">
+                            <li class="page-active">1</li>
+                        </a>
+                        <a href="#">
+                            <li>2</li>
+                        </a>
+                        <a href="#">
+                            <li>3</li>
+                        </a>
+                        <a href="#">
+                            <li>4</li>
+                        </a>
+
                     </ul>
                 </div>
             </div>
@@ -220,7 +222,7 @@
         <div class="check-items">
             <h2>最近チェックした商品</h2>
             <div class="grid grid-cols-3 lg:grid-cols-4 gap-5">
-                <a href="#" class="box w-full h-full relative transition-all duration-700 overflow-hidden">
+                <a href="#" class="w-full h-full relative transition-all duration-700 overflow-hidden">
                     <img src="./products/sake01.webp" alt="日本酒①の画像"
                         class="w-full h-72 rounded-md object-cover cursor-pointer">
                     <div>
@@ -228,7 +230,7 @@
                         <p class="item-price font-bold text-3xl mt-4">¥2,200 （税込）</p>
                     </div>
                 </a>
-                <a href="#" class="box w-full h-full relative transition-all duration-700 overflow-hidden">
+                <a href="#" class="w-full h-full relative transition-all duration-700 overflow-hidden">
                     <img src="./products/sake02.webp" alt="日本酒①の画像"
                         class="w-full h-72 rounded-md object-cover cursor-pointer">
                     <div>
@@ -237,7 +239,7 @@
                         <p class="item-price font-bold text-3xl mt-4">¥32,000 （税込）</p>
                     </div>
                 </a>
-                <a href="#" class="box w-full h-full relative transition-all duration-700 overflow-hidden">
+                <a href="#" class="w-full h-full relative transition-all duration-700 overflow-hidden">
                     <img src="./products/sake03.webp" alt="日本酒①の画像"
                         class="w-full h-72 rounded-md object-cover cursor-pointer">
                     <div>
@@ -245,7 +247,7 @@
                         <p class="item-price font-bold text-3xl mt-4">¥11,800 （税込）</p>
                     </div>
                 </a>
-                <a href="#" class="box w-full h-full relative transition-all duration-700 overflow-hidden">
+                <a href="#" class="w-full h-full relative transition-all duration-700 overflow-hidden">
                     <img src="./products/sake04.webp" alt="日本酒①の画像"
                         class="w-full h-72 rounded-md object-cover cursor-pointer">
                     <div>
@@ -254,11 +256,9 @@
                         <p class="item-price font-bold text-3xl mt-4">¥14,500 （税込）</p>
                     </div>
                 </a>
-
             </div>
         </div>
     </main>
-
 
     <!-- footer section -->
     <footer>ここにフッターを挿入</footer>
