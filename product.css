@@ -2,16 +2,63 @@
 
 .main {
   display: flex;
-  height: 100vh;
+}
+
+.share {
+  display: flex;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
 }
 
 .image-field {
+  position: sticky;
+  width: 200px;
+  height: 450px;
+  top: 0;
+  flex: 1.5;
   background: pink;
-  flex: 1;
- position: sticky;  
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
 }
 
 .letter-field {
-  background: green;
+  /* background: green; */
   flex: 1;
+  padding-left: 100px;
+  padding-right: 50px;
+  padding-top: 50px;
+}
+
+.price {
+  font-size: 150%;
+}
+
+.cart-button {
+  color: white;
+ background-color: black;
+ display: inline-block;
+ min-width: 400px;
+ line-height: 50px;
+}
+
+.like-button {
+  color: black;
+  background-color: cornsilk;
+  display: inline-block;
+  min-width: 400px;
+  line-height: 50px;
+}
+
+.category-button {
+  color: black;
+  background-color: aliceblue;
+  display: inline-block;
+  min-width: 200px;
+  line-height: 50px;
 }
