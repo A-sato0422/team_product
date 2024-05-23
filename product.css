@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+.main {
+  display: flex;
+  height: 100vh;
+}
+
+.image-field {
+  background: pink;
+  flex: 1;
+ position: sticky;  
+}
+
+.letter-field {
+  background: green;
+  flex: 1;
+}
