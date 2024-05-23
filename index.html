@@ -5,88 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>B班課題制作</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
 </head>
 <body>
     <header>
-        <h1 class="title">地酒</h1>
         <nav class="nav">
-          <ul class="menu-group">
-            <li class="menu-item"><a href="#">項目1</a></li>
-            <li class="menu-item"><a href="#">項目2</a></li>
-            <li class="menu-item"><a href="#">項目3</a></li>
-            <li class="menu-item"><a href="#">項目4</a></li>
-            <li class="menu-item"><a href="#">項目5</a></li>
-          </ul>
+            <input type="checkbox" id="menu-toggle" class="checkbox-visually-hidden">
+            <label for="menu-toggle" class="menu-toggle-label">14時まで即日配送</label>
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="menu-group" id="menu-group">
+                <img src="./img/wine.svg" alt="ホームページロゴ" width="45px" height="45px">
+                <li class="menu-item"><a href="#">商品を探す</a></li>
+                <li class="menu-item"><a href="#">特集一覧</a></li>
+                <li class="menu-item"><a href="#">初めての方</a></li>
+                <li class="menu-item"><a href="#">お気に入り</a></li>
+                <li class="menu-item"><a href="#">ご利用ガイド</a></li>
+                <li class="menu-item"><a href="#">店舗一覧</a></li>
+                <img src="./img/search.svg" alt="検索" width="25px" height="25px">
+                <img src="./img/cart.svg" alt="カート" width="25px" height="25px">
+                <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">         
+            </ul>
         </nav>
-      </header>
-       <div>
+    </header>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="./img/carousel01.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="./img/carousel02.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="./img/carousel03.jpg" style="width:100%">
+        </div>
+        <!-- 前後のボタン -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div class="category1">
         <span class="Liquorsearch">お酒を探す</span>
-         <ul>
-          <li><span class="category-wine">ワイン</span></li>
-          <li><span class="category-champa">シャンパン</span></li>
-          <li><span class="category-whiskey">ウィスキー</span></li>
-          <li><span class="category-brandy">ブランデー</span></li>
-          <li><span class="category-shochu">焼酎</span></li>
-          <li><span class="category-japasake">日本酒</span></li>
-          <li><span class="category-spirits">スピリッツ</span></li>
-          <li><span class="category-beer">ビール</span></li>
-          <li><span class="category-liqueur">リキュール</span></li>
-         </ul>
-         </div>
-         <div>
-          <span class="Liquorsearch">ベストセラー</span>
-          <div class="product-container">
-              <div class="product">
-                  <h3>商品名1</h3>
-                  <p>商品1の説明文</p>
-              </div>
-              <div class="product">
-                  <h3>商品名2</h3>
-                  <p>商品2の説明文</p>
-              </div>
-              <div class="product">
-                 <h3>商品名2</h3>
-                 <p>商品2の説明文</p>
-              </div>
-              <div class="product">
-                <h3>商品名2</h3>
-                <p>商品2の説明文</p>
+        <ul>
+            <li><span class="category-wine">ワイン</span></li>
+            <li><span class="category-champa">シャンパン</span></li>
+            <li><span class="category-whiskey">ウィスキー</span></li>
+            <li><span class="category-brandy">ブランデー</span></li>
+            <li><span class="category-shochu">焼酎</span></li>
+            <li><span class="category-japasake">日本酒</span></li>
+            <li><span class="category-spirits">スピリッツ</span></li>
+            <li><span class="category-beer">ビール</span></li>
+            <li><span class="category-liqueur">リキュール</span></li>
+        </ul>
+    </div>
+    <div class="bestsellers-section">
+        <h2>ベストセラー</h2>
+        <div class="product-container">
+            <div class="product">
+                <img src="./img/carousel01.jpg" alt="商品1">
+                <p class="product-name">商品名1</p>
+                <p class="product-description">商品の説明1</p>
             </div>
             <div class="product">
-              <h3>商品名2</h3>
-              <p>商品2の説明文</p>
-          </div>
-              <!-- 追加の商品をここに追加 -->
-           </div>
-          </div>
-          <footer>
-            <div class="footer-columns">
-                <div class="footer-column">
+                <img src="./img/carousel01.jpg" alt="商品1">
+                <p class="product-name">商品名1</p>
+                <p class="product-description">商品の説明1</p>
+            </div>
+            <div class="product">
+                <img src="./img/carousel01.jpg" alt="商品1">
+                <p class="product-name">商品名1</p>
+                <p class="product-description">商品の説明1</p>
+            </div>
+            <div class="product">
+                <img src="./img/carousel01.jpg" alt="商品1">
+                <p class="product-name">商品名1</p>
+                <p class="product-description">商品の説明1</p>
+            </div>
+            <div class="product">
+                <img src="./img/carousel01.jpg" alt="商品1">
+                <p class="product-name">商品名1</p>
+                <p class="product-description">商品の説明1</p>
+            </div>
+            <div class="product">
+                <img src="./img/carousel01.jpg" alt="商品1">
+                <p class="product-name">商品名1</p>
+                <p class="product-description">商品の説明1</p>
+            </div>
+            <!-- 他の商品の情報をここに追加 -->
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="content-box">
+                <div class="footer-section">
                     <h3>会社情報</h3>
-                    <p>〒123-4567 東京都○○区△△町1-2-3</p>
+                    <p>〒920-8217 石川県金沢市近岡町８４５−１</p>
                     <p>TEL: 012-3456-7890</p>
                     <p>Email: info@example.com</p>
                 </div>
-                <div class="footer-column">
+                <div class="footer-section">
                     <h3>リンク</h3>
-                    <ul>
-                        <li><a href="#">会社概要</a></li>
-                        <li><a href="#">サービス</a></li>
-                        <li><a href="#">お問い合わせ</a></li>
-                    </ul>
+                    <p><a href="#">会社概要</a></p>
+                    <p><a href="#">サービス</a></p>
+                    <p><a href="#">お問い合わせ</a></p>
                 </div>
-                <div class="footer-column">
+                <div class="footer-section">
                     <h3>フォローする</h3>
-                    <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Instagram</a></li>
-                    </ul>
+                    <p><a href="#">Facebook</a></p>
+                    <p><a href="#">Twitter</a></p>
+                    <p><a href="#">Instagram</a></p>
                 </div>
             </div>
-            <p class="footer-copyright">&copy; 2024 地酒店</p>
-        </footer>
-
-           
+            <div class="cash">決済方法</div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 地酒店</p>
+        </div>
+    </footer>
 </body>
 </html>
