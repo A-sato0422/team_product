@@ -1,5 +1,24 @@
 'use strict';
 {
+    // carousel UI
+    $(function () {
+        $(".slide-items").slick({
+            autoplay: true,
+            slidesToShow: 3,
+            infinite: true,
+            slidesToScroll: 1,
+            dots: true,
+            responsive: [{
+                breakpoint: 768, // ブレイクポイントを指定
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: true,
+                    centerPadding: '20%',
+                },
+            }]
+        });
+    });
+
     // scroll up UI
     window.addEventListener('scroll', function () {
         // スクロール量を取得
@@ -19,8 +38,6 @@
             }
         });
     });
-
-
 
     //アコーディオンをクリックした時の動作
     $('.title').on('click', function () {//タイトル要素をクリックしたら

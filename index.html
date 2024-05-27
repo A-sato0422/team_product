@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B班課題制作</title>
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+    <!-- slickのCSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
+    <!-- オリジナル CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>B班課題制作</title>
 </head>
+
 <body>
     <header>
         <nav class="nav">
@@ -27,24 +33,21 @@
                 <li class="menu-item"><a href="#">店舗一覧</a></li>
                 <img src="./img/search.svg" alt="検索" width="25px" height="25px">
                 <img src="./img/cart.svg" alt="カート" width="25px" height="25px">
-                <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">         
+                <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">
             </ul>
         </nav>
     </header>
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="./img/carousel01.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="./img/carousel02.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="./img/carousel03.jpg" style="width:100%">
-        </div>
-        <!-- 前後のボタン -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div class="carousel">
+        <ul class="slide-items">
+            <li><img src="./img/carousel02.jpg" alt=""></li>
+            <li><img src="./img/carousel03.jpg" alt=""></li>
+            <li><img src="./img/carousel02.jpg" alt=""></li>
+            <li><img src="./img/carousel03.jpg" alt=""></li>
+            <li><img src="./img/carousel02.jpg" alt=""></li>
+            <li><img src="./img/carousel03.jpg" alt=""></li>
+        </ul>
     </div>
+
     <div class="category1">
         <span class="Liquorsearch">お酒を探す</span>
         <ul>
@@ -123,5 +126,13 @@
             <p>&copy; 2024 地酒店</p>
         </div>
     </footer>
+
+    <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <!-- slickのJavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- オリジナル js -->
+    <script src="./main.js"></script>
 </body>
+
 </html>
