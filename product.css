@@ -43,15 +43,29 @@
   top: 0;
   flex: 1.5;
   background: pink;
+} 
+
+section img {
+  max-width: 100%;
 }
-
-img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-
+.image-field {
+  margin: 0 auto 0 auto;
+  max-width: 90%;
+  width: 500px;
 }
-
+ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+li {
+  flex: 1 1 auto;
+  margin-right: 8px;
+}
+li:last-of-type {
+  margin-right: 0;
+}
 .letter-field {
   /* background: green; */
   flex: 1;
@@ -103,4 +117,5 @@ img {
   padding: 5px;
   font-weight: bold;
 }
+
 
