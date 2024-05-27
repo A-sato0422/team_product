@@ -1,50 +1,69 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B班課題制作</title>
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+    <!-- slickのCSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
+    <!-- オリジナル CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>B班課題制作</title>
 </head>
+
 <body>
     <header>
         <nav class="nav">
             <input type="checkbox" id="menu-toggle" class="checkbox-visually-hidden">
             <label for="menu-toggle" class="menu-toggle-label">14時まで即日配送</label>
-            <label for="menu-toggle" class="menu-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
+            <!-- スマホ用 menu icon -->
+            <div class="menu">
+                <div class="nav-icon" id="menu-icon">
+                    <div class="nav-bar top"></div>
+                    <div class="nav-bar middle"></div>
+                    <div class="nav-bar bottom"></div>
+                </div>
+            </div>
+            <!-- overlay -->
+            <div id="overlay"></div>
+
+            <!-- menu-content -->
+            <div id="menu-content">
+                <ul class="overlay-items">
+                    <li><a href="#" class="overlay-item">商品を探す</a></li>
+                    <li><a href="#" class="overlay-item">特集一覧</a></li>
+                    <li><a href="#" class="overlay-item">お気に入り</a></li>
+                    <li><a href="#" class="overlay-item">ご利用ガイド</a></li>
+                    <li><a href="#" class="overlay-item">店舗一覧</a></li>
+                </ul>
+            </div>
+
             <ul class="menu-group" id="menu-group">
                 <img src="./img/wine.svg" alt="ホームページロゴ" width="45px" height="45px">
                 <li class="menu-item"><a href="#">商品を探す</a></li>
                 <li class="menu-item"><a href="#">特集一覧</a></li>
-                <li class="menu-item"><a href="#">初めての方</a></li>
                 <li class="menu-item"><a href="#">お気に入り</a></li>
                 <li class="menu-item"><a href="#">ご利用ガイド</a></li>
                 <li class="menu-item"><a href="#">店舗一覧</a></li>
                 <img src="./img/search.svg" alt="検索" width="25px" height="25px">
                 <img src="./img/cart.svg" alt="カート" width="25px" height="25px">
-                <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">         
+                <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">
             </ul>
         </nav>
     </header>
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="./img/carousel01.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="./img/carousel02.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="./img/carousel03.jpg" style="width:100%">
-        </div>
-        <!-- 前後のボタン -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div class="carousel">
+        <ul class="slide-items">
+            <li><img src="./img/carousel02.jpg" alt=""></li>
+            <li><img src="./img/carousel03.jpg" alt=""></li>
+            <li><img src="./img/carousel02.jpg" alt=""></li>
+            <li><img src="./img/carousel03.jpg" alt=""></li>
+            <li><img src="./img/carousel02.jpg" alt=""></li>
+            <li><img src="./img/carousel03.jpg" alt=""></li>
+        </ul>
     </div>
+
     <div class="category1">
         <span class="Liquorsearch">お酒を探す</span>
         <ul>
@@ -117,11 +136,50 @@
                     <p><a href="#">Instagram</a></p>
                 </div>
             </div>
-            <div class="cash">決済方法</div>
+            <div class="cash">
+                <h2>お支払い方法</h2>
+                <p>SAKE People では下記のお支払い方法がご利用いただけます。</p>
+                <div class="cash-icons">
+                    <div class="cash-icon">amazon</div>
+                    <div class="cash-icon">amazon</div>
+                    <div class="cash-icon">amazon</div>
+                    <div class="cash-icon">amazon</div>
+                    <div class="cash-icon">amazon</div>
+                    <div class="cash-icon">amazon</div>
+                    <div class="cash-icon">amazon</div>
+                    <div class="cash-icon">amazon</div>
+                    <div class="cash-icon">amazon</div>
+                    <div class="cash-icon">amazon</div>
+                </div>
+                <ul>
+                    <li>クレジットカード決済</li>
+                    <li>Amazon Pay</li>
+                    <li>Google Pay</li>
+                    <li>Apple Pay</li>
+                    <li>PayPay（オンライン決済）</li>
+                    <li>楽天Pay（オンライン決済）</li>
+                    <li>au Pay（オンライン決済）</li>
+                    <li>d払い（キャリア決済）</li>
+                    <li>ソフトバンクまとめて支払い（キャリア決済）</li>
+                    <li>LINE Pay（オンライン決済）</li>
+                    <li>コンビニ前払い（ファミリーマート/セブンイレブン/ローソン/ミニストップ）</li>
+                    <li>あと払い（ペイディ）</li>
+                    <li>銀行振込</li>
+                    <li>代金引換</li>
+                </ul>
+            </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2024 地酒店</p>
         </div>
     </footer>
+
+    <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <!-- slickのJavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- オリジナル js -->
+    <script src="./main.js"></script>
 </body>
+
 </html>
