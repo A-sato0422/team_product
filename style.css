@@ -5,10 +5,14 @@ header {
   color: #333;
   padding: 10px 0;
   text-align: center;
-  position: fixed; /* ヘッダーを固定位置に */
-  top: 0; /* ページの上部にヘッダーを配置 */
-  width: 100%; /* ヘッダーの幅をページ全体に広げる */
-  left: 0; /* ヘッダーを左端に配置 */
+  position: fixed;
+  /* ヘッダーを固定位置に */
+  top: 0;
+  /* ページの上部にヘッダーを配置 */
+  width: 100%;
+  /* ヘッダーの幅をページ全体に広げる */
+  left: 0;
+  /* ヘッダーを左端に配置 */
   z-index: 100;
 }
 
@@ -18,21 +22,20 @@ header {
 }
 
 .menu-group {
- margin-right: 21px;
- margin-left: 21px;
+  margin-right: 21px;
+  margin-left: 21px;
 }
 
 .menu-item {
   list-style: none;
   display: inline-block;
   padding: 10px;
-  font-family: Noto Serif Japanese; 
+  font-family: Noto Serif Japanese;
 }
 
- /* carousel UI */
+/* carousel UI */
 .carousel {
   margin-top: 150px;
-  /* background: pink; */
 }
 
 .slide-items {
@@ -71,26 +74,145 @@ header {
   border: none;
 }
 
- a {
+a {
   color: inherit;
   text-decoration: none;
- }
+}
 
- nav {
+nav {
   text-align: center;
- }
+}
 
-div ul {
+/* sp nav menu */
+.menu {
+  position: fixed;
+  top: 15px;
+  right: 50px;
+  z-index: 100;
+  display: none;
+}
+
+.nav-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.nav-icon .nav-bar {
+  content: '';
+  background: #444;
+  width: 30px;
+  height: 2px;
+  display: block;
+  transition: all .6s;
+}
+
+.nav-icon .nav-bar.push {
+  background: #fff;
+}
+
+.nav-icon .nav-bar {
+  margin-bottom: 6px;
+}
+
+.nav-icon .nav-bar:last-child {
+  margin-bottom: 0;
+}
+
+.nav-icon .nav-bar.push.top {
+  position: absolute;
+  top: 50%;
+  transform: rotate(225deg);
+}
+
+.nav-icon .nav-bar.push.middle {
+  position: absolute;
+  top: 50%;
+  opacity: 0;
+}
+
+.nav-icon .nav-bar.push.bottom {
+  position: absolute;
+  top: 50%;
+  transform: rotate(-225deg);
+}
+
+#movie {
+  margin-top: 80px;
+}
+
+#overlay {
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .8;
+  color: #fff;
+  font-size: 14px;
+  transform: translateX(-100%);
+  transition: all .3s;
+  z-index: 10;
+}
+
+#menu-content {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  top: 0;
+  transform: translateX(-300px);
+  transition: all .6s;
+  background: #000;
+  color: #fff;
+  z-index: 20;
+  text-align: start;
+}
+
+#menu-content ul {
+  list-style: none;
+}
+
+#menu-content ul {
+  padding: 80px 20px 0;
+}
+
+#menu-content .overlay-items li {
+  padding: 20px 0;
+  border-top: 1px solid #fff;
+}
+
+#menu-content .overlay-items li:last-child {
+  border-bottom: 1px solid #fff;
+}
+
+#menu-content .overlay-sns li {
+  margin-bottom: 16px;
+}
+
+#overlay.appear,
+#menu-content.appear {
+  transform: translateX(0);
+}
+
+
+
+
+.category1 ul {
   inline-size: none;
   padding: 0;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   max-width: 600px;
- }
+}
 
- div li {
+.category1 li {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,30 +222,39 @@ div ul {
   height: 100px;
   text-align: center;
   transition: background-color 0.3s;
- }
+}
 
- div li:hover {
+.category1 li:hover {
   background-color: #ddd;
- }
+}
 
- .Liquorsearch {
+.Liquorsearch {
   display: block;
   font-size: 1.5em;
   margin: 20px 0 10px 0;
-  text-align: center; /* 中央揃え */
+  text-align: center;
+  /* 中央揃え */
   color: #333;
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
- .category-wine, .category-champa, .category-whiskey, .category-brandy, .category-shochu, .category-japasake, .category-spirits, .category-beer, .category-liqueur {
+.category-wine,
+.category-champa,
+.category-whiskey,
+.category-brandy,
+.category-shochu,
+.category-japasake,
+.category-spirits,
+.category-beer,
+.category-liqueur {
   display: block;
   width: 200px;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
- }
+}
 
 /* 商品コンテナのスタイル */
 .bestsellers-section {
@@ -172,7 +303,7 @@ div ul {
 footer {
   background-color: #ffffff;
   color: #090000;
-  padding: 50px 0;
+  margin-top: 100px;
   text-align: center;
 }
 
@@ -196,86 +327,107 @@ footer {
   flex-direction: column;
 }
 
-.cash {
-  background-color: rgb(255, 255, 255);
-  flex: 4;
-  background: pink;
-}
-
 .footer-section h3 {
-  text-align: left;
-  margin-bottom: 15px; /* 文字が小さくなるため余白を調整 */
-  font-size: 0.9rem; /* 文字サイズを調整 */
+  text-align: center;
 }
 
 .footer-bottom {
   margin-top: 30px;
-  font-size: 0.85rem; /* 文字サイズを調整 */
-  padding-top: 250px;
+  font-size: 12px;
 }
 
+.cash {
+  flex: 4;
+  text-align: start;
+  padding: 0 8px;
+  max-width: 600px;
+}
+
+.cash h2 {
+  font-size: 18px;
+  text-align: center;
+}
+
+.cash-icons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cash-icons .cash-icon {
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.cash ul {
+  display: block;
+  margin-top: 16px;
+  font-size: 12px;
+  padding: 14px;
+}
+
+.cash ul li {
+  margin-bottom: 4px;
+}
+
+@media (max-width: 1024px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cash {
+    margin-top: 24px;
+  }
+}
 
 @media (max-width: 768px) {
   .nav .menu-group {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .menu-item {
-      margin-bottom: 10px;
+    margin-bottom: 10px;
   }
 
   .category1 ul {
-      grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .product {
-      width: 100%;
-      max-width: 300px;
-      margin: 10px 0;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
   }
 
-  .footer-content {
-      flex-direction: column;
-      align-items: center;
+  /* SP menu 表示 */
+  .menu {
+    display: block;
   }
 
-  .footer-section {
-    display: flex;
+  /* PC menu 非表示 */
+  .menu-group {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
   }
-  .cash {
-    display: flex;
+
+  /* チェックボックスの非表示 */
+  #menu-toggle {
+    display: none;
   }
-    /* ハンバーガーメニューアイコンの表示 */
-    .menu-icon {
-        display: flex;
-    }
-
-    /* メニューの非表示 */
-    .menu-group {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
-
-    /* チェックボックスの非表示 */
-    #menu-toggle {
-        display: none;
-    }
-
-    /* メニューの表示 */
-    #menu-toggle:checked + .menu-icon + .menu-group {
-        display: flex;
-    }
 
   .nav .menu-group {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .menu-item {
-      margin-right: 0;
+    margin-right: 0;
   }
 
   .category1 ul {
@@ -284,68 +436,44 @@ footer {
 
   .product-container {
     display: flex;
-    overflow-x: auto; /* 追加 */
+    overflow-x: auto;
+    /* 追加 */
     gap: 10px;
     padding: 10px 0;
   }
 
   .product {
-      width: 100%;
-      max-width: 300px;
-      margin: 10px 0;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
   }
 
-  .menu-icon {
+  /* チェックボックスのスタイルを隠す */
+  #menu-toggle {
     display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    margin-right: 20px;
-}
+  }
 
-.menu-icon span {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #333;
-    transition: all 0.3s;
-}
-
-/* チェックボックスのスタイルを隠す */
-#menu-toggle {
-    display: none;
-}
-
-/* メニューの非表示 */
-.menu-group {
+  /* メニューの非表示 */
+  .menu-group {
     display: flex;
     flex-direction: row;
-}
-    .menu-icon {
-        display: flex;
-    }
+  }
 
-    .menu-group {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
+  .menu-group {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
 
-#menu-toggle:checked + .menu-icon + .menu-group {
-        display: flex;
-    }
+  .checkbox-visually-hidden {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+  }
 
-.checkbox-visually-hidden {
-  position: absolute;
-  left: -9999px;
-  top: -9999px;
-}
-
-.menu-toggle-label {
-  cursor: pointer;
-  /* その他のスタイル */
-}
+  .menu-toggle-label {
+    cursor: pointer;
+    /* その他のスタイル */
+  }
 }

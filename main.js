@@ -1,5 +1,30 @@
 'use strict';
 {
+    // sp nav menu
+    const menuIcon = document.getElementById('menu-icon');
+    const menuContent = document.getElementById('menu-content');
+    const overlay = document.getElementById('overlay');
+    const navBar = document.querySelectorAll('.nav-bar');
+    const overlayItem = document.querySelectorAll('.overlay-item');
+
+    function navAction() {
+        overlay.classList.toggle('appear');
+        menuContent.classList.toggle('appear');
+        navBar.forEach(e => {
+            e.classList.toggle('push')
+        });;
+    }
+
+    menuIcon.addEventListener('click', () => {
+        navAction();
+    });
+
+    overlayItem.forEach(e => {
+        e.addEventListener('click', () => {
+            navAction();
+        });
+    });
+
     // carousel UI
     $(function () {
         $(".slide-items").slick({
