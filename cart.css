@@ -149,6 +149,7 @@ header {
 .cart-table {
   width: 100%;
   border-collapse: collapse;
+  font-size: 1.6rem;
 }
 
 .text-right {
@@ -160,6 +161,7 @@ header {
   border: 1px solid #ebeced;
   vertical-align: middle;
   padding: 5px 10px;
+  font-weight: normal;
 }
 
 .cart-table th {

@@ -148,7 +148,7 @@ foreach ($products as $name => $product) {
                     </table>
                     <div class="cart-btn">
                         <button type="button" class="btn btn-blue">購入手続きへ</button>
-                        <a href="./list_page.html">
+                        <a href="./index.html">
                             <button type="button" class="btn btn-gray">お買い物を続ける</button>
                         </a>
                     </div>

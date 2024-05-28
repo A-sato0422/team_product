@@ -1,3 +1,49 @@
+<?php
+require_once "./encode.php";
+
+$name = e($_POST['name'] ?? '');
+$price = e($_POST['price'] ?? '');
+$count = e($_POST['count'] ?? '');
+
+session_start();
+// カートにすでに商品がはいいている場合、個数を追加する
+if (isset($_SESSION['products'])) {
+    $products = $_SESSION['products'];
+    foreach ($products as $key => $product) {
+        if ($key == $name) {
+            $count = (int)$count + (int)$product['count'];
+        }
+    }
+}
+
+if ($name != '' && $price != '' && $count != '') {
+    $_SESSION['products'][$name] = [
+        'price' => $price,
+        'count' => $count
+    ];
+}
+$products = isset($_SESSION['products']) ? $_SESSION['products'] : [];
+
+if (isset($_POST['name'])) {
+    $resultMessage = "商品をカートに追加しました";
+} else {
+    $resultMessage = "";
+}
+
+// 画面上部にセッション情報を表示
+// if (isset($products)) {
+//     foreach ($products as $key => $product) {
+//         echo $key;      //商品名
+//         echo "<br>";
+//         echo $product['count'];  //商品の個数
+//         echo "<br>";
+//         echo $product['price']; //商品の金額
+//         echo "<br>";
+//     }
+// }
+
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -9,12 +55,9 @@
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- font awesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- slickのCSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
@@ -84,10 +127,10 @@
         <div class="main">
             <section>
                 <div class="image-field">
-                    <img src="./img/wine1.jpg" class="bigimg" id="bigimg">
+                    <img src="./img/wine4.webp" class="bigimg" id="bigimg">
                     <ul>
-                        <li><img src="./img/wine1.jpg" class="thumb" data-image="wine1.jpg"></li>
-                        <li><img src="./img/wine2.jpg" class="thumb" data-image="wine2.jpg"></li>
+                        <li><img src="./img/wine4.webp" class="thumb" data-image="wine4.webp"></li>
+                        <li><img src="./img/wine5.webp" class="thumb" data-image="wine5.webp"></li>
                     </ul>
                 </div>
             </section>
@@ -100,11 +143,23 @@
                     </ul>
                 </div>
                 <div class="shopping-title">
-                    <h1>ジェーン エア ジュヴレ シャンベルタン プルミエ クリュ レ コルボー 2021 750ml 赤ワイン フランス ブルゴーニュ ミディアムボディ</h1>
+                    <h1>ジェーン エア ジュヴレ シャンベルタン 2020 750ml 赤ワイン フランス ブルゴーニュ ミディアムボディ</h1>
                 </div>
-                <p class="price">\32000</p>
                 <div class="shopping-button">
-                    <button type="button" class="cart-button">カートに追加する</button>
+                    <form class="item-form" method="POST" action="./product_02.php">
+                        <div class="amount">
+                            <p class="price">\11,800 （税込）</p>
+                            <input type="hidden" name="name" value="ジェーン エア ジュヴレ シャンベルタン 2020 750ml 赤ワイン フランス ブルゴーニュ ミディアムボディ">
+                            <input type="hidden" name="price" value="11800">
+                            <label for="count">個数</label>
+                            <input type="text" value="1" name="count" class="count" id="count">
+                        </div>
+                        <button type="submit" class="cart-button">カートに入れる</button>
+                        <!-- PHP処理後のメッセージを表示 -->
+                        <?php if (isset($resultMessage)) : ?>
+                            <p class="result-message"><?= $resultMessage ?></p>
+                        <?php endif; ?>
+                    </form><!-- end item-form -->
                     <button type="button" class="like-button">☆お気に入り</button>
                     <p>----------------------関連リンク----------------------</p>
                     <button type="button" class="category-button">ワイン</button>
@@ -205,16 +260,14 @@
             <h2>最近チェックした商品</h2>
             <div class="grid grid-cols-3 lg:grid-cols-4 gap-5">
                 <a href="#" class="w-full h-full relative transition-all duration-700 overflow-hidden">
-                    <img src="./products/sake01.webp" alt="日本酒①の画像"
-                        class="w-full h-72 rounded-md object-cover cursor-pointer">
+                    <img src="./products/sake01.webp" alt="日本酒①の画像" class="w-full h-72 rounded-md object-cover cursor-pointer">
                     <div>
                         <p class="item-title mt-4">谷川岳 源水吟醸 15% 正規品 1800ml 永井酒造 箱なし 日本酒</p>
                         <p class="item-price font-bold text-3xl mt-4">¥2,200 （税込）</p>
                     </div>
                 </a>
                 <a href="#" class="w-full h-full relative transition-all duration-700 overflow-hidden">
-                    <img src="./products/sake02.webp" alt="日本酒①の画像"
-                        class="w-full h-72 rounded-md object-cover cursor-pointer">
+                    <img src="./products/sake02.webp" alt="日本酒①の画像" class="w-full h-72 rounded-md object-cover cursor-pointer">
                     <div>
                         <p class="item-title mt-4">ジェーン エア ジュヴレ シャンベルタン プルミエ クリュ レ コルボー 2021 750ml 赤ワイン フランス
                             ブルゴーニュ ミディアムボディ</p>
@@ -222,16 +275,14 @@
                     </div>
                 </a>
                 <a href="#" class="w-full h-full relative transition-all duration-700 overflow-hidden">
-                    <img src="./products/sake03.webp" alt="日本酒①の画像"
-                        class="w-full h-72 rounded-md object-cover cursor-pointer">
+                    <img src="./products/sake03.webp" alt="日本酒①の画像" class="w-full h-72 rounded-md object-cover cursor-pointer">
                     <div>
                         <p class="item-title mt-4">ジェーン エア ジュヴレ シャンベルタン 2020 750ml 赤ワイン フランス ブルゴーニュ ミディアムボディ</p>
                         <p class="item-price font-bold text-3xl mt-4">¥11,800 （税込）</p>
                     </div>
                 </a>
                 <a href="#" class="w-full h-full relative transition-all duration-700 overflow-hidden">
-                    <img src="./products/sake04.webp" alt="日本酒①の画像"
-                        class="w-full h-72 rounded-md object-cover cursor-pointer">
+                    <img src="./products/sake04.webp" alt="日本酒①の画像" class="w-full h-72 rounded-md object-cover cursor-pointer">
                     <div>
                         <p class="item-title mt-4">ドメーヌ アラン ビュルゲ ジュヴレ シャンベルタン メ ファヴォリット ヴィエイユ ヴィーニュ 2021 750ml
                             赤ワイン フランス ブルゴーニュ ミディアムボディ</p>
@@ -303,8 +354,7 @@
         </div>
     </footer>
     <!-- top button -->
-    <a href="#top"
-        class="bg-theme hover:bg-selected-text transition-all duration-300 text-white lg:hidden fixed bottom-2 right-2 flex items-center justify-center w-14 h-14 p-5 rounded-full cursor-pointer">^</a>
+    <a href="#top" class="bg-theme hover:bg-selected-text transition-all duration-300 text-white lg:hidden fixed bottom-2 right-2 flex items-center justify-center w-14 h-14 p-5 rounded-full cursor-pointer">^</a>
 
     <!-- jQuery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>

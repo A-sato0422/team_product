@@ -141,3 +141,27 @@ li:last-of-type {
   padding: 5px;
   font-weight: bold;
 }
+
+/* form section */
+.item-form .amount {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.item-form .amount label {
+  margin-right: 16px;
+  margin-left: 50px;
+}
+
+.item-form .amount .count {
+  border: 1px solid #ccc;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+}
+
+.result-message {
+  color: red;
+  margin-bottom: 20px;
+}
