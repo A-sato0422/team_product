@@ -70,20 +70,36 @@ img {
 }
 
 /* header section */
-header {
-    text-align: center;
-    height: 100px;
-    border-bottom: 1px solid #333;
+header .menu-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3.8rem;
+}
+
+header img {
+    margin-right: 1rem;
 }
 
 /* main section */
+main {
+    margin-top: 20rem;
+}
+
 main .kind-title {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 200px;
+    border-top: 1px solid #333;
     border-bottom: 1px solid #333;
 }
+
+main .kind-title h2 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
 
 main .item-sort {
     display: flex;
@@ -156,9 +172,9 @@ main .check-items h2 {
 
 /* footer section */
 footer {
-    text-align: center;
-    height: 300px;
     border-top: 1px solid #333;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 

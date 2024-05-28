@@ -1,11 +1,23 @@
 @charset "utf-8";
 
+/* header section */
+header .menu-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.8rem;
+}
+
+header .menu-group div {
+  padding-right: 20px;
+}
+
 .main {
   display: flex;
 }
 
 .shopping-title h1 {
- font-size: 120%;
+  font-size: 120%;
 }
 
 .shopping-button button {
@@ -14,7 +26,7 @@
 }
 
 .share-img {
- width: 50px;
+  width: 50px;
   height: 50px;
   margin-bottom: 10px;
 
@@ -27,7 +39,7 @@
 .share-img ul {
   display: flex;
   justify-content: center;
- 
+
 }
 
 .share-img li {
@@ -44,17 +56,17 @@
   max-width: 90%;
   width: 500px;
   align-items: center;
-} 
+}
 
 .image-field .bigimg {
-  margin: 0 auto;  
+  margin: 0 auto;
 }
 
 .image-field ul {
   width: 150px;
   height: 150px;
- justify-content: center;
- margin: 20px auto 0;
+  justify-content: center;
+  margin: 20px auto 0;
 
 }
 
@@ -68,13 +80,16 @@ ul {
   padding: 0;
   list-style-type: none;
 }
+
 li {
   flex: 1 1 auto;
   margin-right: 8px;
 }
+
 li:last-of-type {
   margin-right: 0;
 }
+
 .letter-field {
   /* background: green; */
   flex: 1;
@@ -89,10 +104,10 @@ li:last-of-type {
 
 .cart-button {
   color: white;
- background-color: black;
- display: inline-block;
- min-width: 400px;
- line-height: 50px;
+  background-color: black;
+  display: inline-block;
+  min-width: 400px;
+  line-height: 50px;
 }
 
 .like-button {
@@ -126,5 +141,3 @@ li:last-of-type {
   padding: 5px;
   font-weight: bold;
 }
-
-

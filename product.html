@@ -22,11 +22,62 @@
 <!-- CSS -->
 <link rel="stylesheet" href="./list_page.css">
 <link rel="stylesheet" href="./product.css">
+<link rel="stylesheet" href="./style.css">
 
 <body id="top" class="font-poppins">
 
     <!-- header section -->
-    <header>ここにヘッダーを挿入</header>
+    <header>
+        <nav class="nav">
+            <input type="checkbox" id="menu-toggle" class="checkbox-visually-hidden">
+            <label for="menu-toggle" class="menu-toggle-label">14時まで即日配送</label>
+            <!-- スマホ用 menu icon -->
+            <div class="menu">
+                <div class="nav-icon" id="menu-icon">
+                    <div class="nav-bar top"></div>
+                    <div class="nav-bar middle"></div>
+                    <div class="nav-bar bottom"></div>
+                </div>
+            </div>
+            <!-- overlay -->
+            <div id="overlay"></div>
+
+            <!-- menu-content -->
+            <div id="menu-content">
+                <ul class="overlay-items">
+                    <li><a href="./list_page.html" class="overlay-item">商品を探す</a></li>
+                    <li><a href="#" class="overlay-item">特集一覧</a></li>
+                    <li><a href="#" class="overlay-item">お気に入り</a></li>
+                    <li><a href="#" class="overlay-item">ご利用ガイド</a></li>
+                    <li><a href="#" class="overlay-item">店舗一覧</a></li>
+                </ul>
+                <ul class="overlay-login">
+                    <li><a href="#">カート</a></li>
+                    <li><a href="#">新規ログイン</a></li>
+                </ul>
+            </div>
+
+            <ul class="menu-group" id="menu-group">
+                <a href="./index.html">
+                    <img src="./img/wine.svg" alt="ホームページロゴ" width="45px" height="45px">
+                </a>
+                <div>
+                    <li class="menu-item"><a href="./list_page.html">商品を探す</a></li>
+                    <li class="menu-item"><a href="#">特集一覧</a></li>
+                    <li class="menu-item"><a href="#">お気に入り</a></li>
+                    <li class="menu-item"><a href="#">ご利用ガイド</a></li>
+                    <li class="menu-item"><a href="#">店舗一覧</a></li>
+                </div>
+                <img src="./img/search.svg" alt="検索" width="25px" height="25px">
+                <a href="./cart.php">
+                    <img src="./img/cart.svg" alt="カート" width="25px" height="25px">
+                </a>
+                <a href="./register.html">
+                    <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">
+                </a>
+            </ul>
+        </nav>
+    </header>
 
     <!-- main section -->
     <main>
@@ -192,7 +243,65 @@
     </main>
 
     <!-- footer section -->
-    <footer>ここにフッターを挿入</footer>
+    <footer>
+        <div class="footer-content">
+            <div class="content-box">
+                <div class="footer-section">
+                    <h3>会社情報</h3>
+                    <p>〒920-8217 石川県金沢市近岡町８４５−１</p>
+                    <p>TEL: 012-3456-7890</p>
+                    <p>Email: info@example.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>リンク</h3>
+                    <p><a href="#">会社概要</a></p>
+                    <p><a href="#">サービス</a></p>
+                    <p><a href="#">お問い合わせ</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>フォローする</h3>
+                    <p><a href="#">Facebook</a></p>
+                    <p><a href="#">Twitter</a></p>
+                    <p><a href="#">Instagram</a></p>
+                </div>
+            </div>
+            <div class="cash">
+                <h2>お支払い方法</h2>
+                <p>SAKE People では下記のお支払い方法がご利用いただけます。</p>
+                <div class="cash-icons">
+                    <div class="cash-icon">amazon</div>
+                    <div class="cash-icon">amazon</div>
+                    <div class="cash-icon">amazon</div>
+                    <div class="cash-icon">amazon</div>
+                    <div class="cash-icon">amazon</div>
+                    <div class="cash-icon">amazon</div>
+                    <div class="cash-icon">amazon</div>
+                    <div class="cash-icon">amazon</div>
+                    <div class="cash-icon">amazon</div>
+                    <div class="cash-icon">amazon</div>
+                </div>
+                <ul>
+                    <li>クレジットカード決済</li>
+                    <li>Amazon Pay</li>
+                    <li>Google Pay</li>
+                    <li>Apple Pay</li>
+                    <li>PayPay（オンライン決済）</li>
+                    <li>楽天Pay（オンライン決済）</li>
+                    <li>au Pay（オンライン決済）</li>
+                    <li>d払い（キャリア決済）</li>
+                    <li>ソフトバンクまとめて支払い（キャリア決済）</li>
+                    <li>LINE Pay（オンライン決済）</li>
+                    <li>コンビニ前払い（ファミリーマート/セブンイレブン/ローソン/ミニストップ）</li>
+                    <li>あと払い（ペイディ）</li>
+                    <li>銀行振込</li>
+                    <li>代金引換</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 地酒店</p>
+        </div>
+    </footer>
     <!-- top button -->
     <a href="#top"
         class="bg-theme hover:bg-selected-text transition-all duration-300 text-white lg:hidden fixed bottom-2 right-2 flex items-center justify-center w-14 h-14 p-5 rounded-full cursor-pointer">^</a>
