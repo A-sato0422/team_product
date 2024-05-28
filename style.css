@@ -181,6 +181,15 @@ nav {
   padding: 80px 20px 0;
 }
 
+#menu-content .overlay-login {
+  padding: 40px 20px 0;
+}
+
+#menu-content .overlay-login  li {
+  margin-bottom: 10px;
+}
+
+
 #menu-content .overlay-items li {
   padding: 20px 0;
   border-top: 1px solid #fff;
