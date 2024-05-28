@@ -42,8 +42,8 @@ $stt->execute();
             <div class="register-title">
                 <h2>登録が完了しました</h2>
                 <h4>ご登録ありがとうございました。</h4>
-                <a href="./register.html">
-                    <button class="btn-top">トップページに戻る</button>
+                <a href="./index.html">
+                    <button class="btn-top">お買い物を続ける</button>
                 </a>
             </div>
         </div>

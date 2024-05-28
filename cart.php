@@ -50,70 +50,64 @@ foreach ($products as $name => $product) {
     <link rel="icon" href="favicon.ico">
 
     <!-- css -->
-    <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="responsive.css"> -->
-
+    <link rel="stylesheet" href="./cart.css">
+    <link rel="stylesheet" href="./style.css">
     <!-- icon -->
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <div class="container">
-            <div class="header-logo">
-                <h1><a href="index.php"><img src="img/square_logo.png" id="logo"></a></h1>
-            </div>
-
-            <!-- ハンバーガーメニューボタン -->
-            <div class="toggle">
-                <div>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+        <nav class="nav">
+            <!-- <input type="checkbox" id="menu-toggle" class="checkbox-visually-hidden"> -->
+            <!-- <p for="menu-toggle" class="menu-toggle-label">14時まで即日配送</p> -->
+            <!-- スマホ用 menu icon -->
+            <div class="menu">
+                <div class="nav-icon" id="menu-icon">
+                    <div class="nav-bar top"></div>
+                    <div class="nav-bar middle"></div>
+                    <div class="nav-bar bottom"></div>
                 </div>
             </div>
+            <!-- overlay -->
+            <div id="overlay"></div>
 
-            <div class="cart">
-                <a href="cart.php"><i class="fas fa-shopping-cart"></i></a>
+            <!-- menu-content -->
+            <div id="menu-content">
+                <ul class="overlay-items">
+                    <li><a href="./list_page.html" class="overlay-item">商品を探す</a></li>
+                    <li><a href="#" class="overlay-item">特集一覧</a></li>
+                    <li><a href="#" class="overlay-item">お気に入り</a></li>
+                    <li><a href="#" class="overlay-item">ご利用ガイド</a></li>
+                    <li><a href="#" class="overlay-item">店舗一覧</a></li>
+                </ul>
+                <ul class="overlay-login">
+                    <li><a href="#">カート</a></li>
+                    <li><a href="#">新規ログイン</a></li>
+                </ul>
             </div>
 
-            <nav class="sp-menu menu">
-                <ul>
-                    <li><a href="index.php#service">サービス</a></li>
-                    <li><a href="shop.php">商品一覧</a></li>
-                    <li><a href="index.php#news">お知らせ</a></li>
-                    <li><a href="index.php#about">会社概要</a></li>
-                    <li><a href="ブログのURL">ブログ</a></li>
-                    <li><a href="register.html">会員登録</a></li>
-                </ul>
-            </nav>
-
-            <nav class="pc-menu menu-left menu">
-                <ul>
-                    <li><a href="index.php#service">サービス</a></li>
-                    <li><a href="shop.php">商品一覧</a></li>
-                    <li><a href="index.php#news">お知らせ</a></li>
-                    <li><a href="index.php#about">会社概要</a></li>
-                    <li><a href="ブログのURL">ブログ</a></li>
-                </ul>
-            </nav>
-            <nav class="pc-menu menu-right menu">
-                <ul>
-                    <li><a href="cart.php"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li><a href="register.html">会員登録</a></li>
-                </ul>
-            </nav>
-        </div>
+            <ul class="menu-group" id="menu-group">
+                <a href="./index.html">
+                    <img src="./img/wine.svg" alt="ホームページロゴ" width="45px" height="45px">
+                </a>
+                <li class="menu-item"><a href="./list_page.html">商品を探す</a></li>
+                <li class="menu-item"><a href="#">特集一覧</a></li>
+                <li class="menu-item"><a href="#">お気に入り</a></li>
+                <li class="menu-item"><a href="#">ご利用ガイド</a></li>
+                <li class="menu-item"><a href="#">店舗一覧</a></li>
+                <img src="./img/search.svg" alt="検索" width="25px" height="25px">
+                <a href="./cart.php">
+                    <img src="./img/cart.svg" alt="カート" width="25px" height="25px">
+                </a>
+                <a href="./register.html">
+                    <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">
+                </a>
+            </ul>
+        </nav>
     </header>
+
     <main>
-        <div class="breadcrumbs">
-            <div class="container">
-                <ul>
-                    <li><a href="index.php">TOP</a></li>
-                    <li>カート</li>
-                </ul>
-            </div>
-        </div>
         <div class="wrapper last-wrapper">
             <div class="container">
                 <div class="wrapper-title">
@@ -154,28 +148,17 @@ foreach ($products as $name => $product) {
                     </table>
                     <div class="cart-btn">
                         <button type="button" class="btn btn-blue">購入手続きへ</button>
-                        <button type="button" class="btn btn-gray">お買い物を続ける</button>
+                        <a href="./index.html">
+                            <button type="button" class="btn btn-gray">お買い物を続ける</button>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    <footer>
-        <div class="container">
-            <p>Copyright @ 2018 SQUARE, inc.</p>
-        </div>
-    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-        $(function() {
-            // ハンバーガーメニューの動作
-            $('.toggle').click(function() {
-                $("header").toggleClass('open');
-                $(".sp-menu").slideToggle(500);
-            });
-        });
-    </script>
+    <script src="./main.js"></script>
 
 </body>
 
