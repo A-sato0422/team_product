@@ -28,6 +28,10 @@ p {
   font-size: 1.4rem;
   line-height: 1.8;
   letter-spacing: 0.1rem;
+}
+
+a {
+  text-decoration: none;
   color: inherit;
 }
 
