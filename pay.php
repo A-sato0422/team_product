@@ -1,3 +1,8 @@
+<?php
+session_start();
+$user = $_SESSION['user'] ?? [];
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -82,7 +87,7 @@
                 <a href="./cart.php">
                     <img src="./img/cart.svg" alt="カート" width="25px" height="25px">
                 </a>
-                <a href="./register.html">
+                <a href="./register.php">
                     <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">
                 </a>
             </ul>
@@ -100,23 +105,23 @@
                     <div class="pay_form_container">
                         <div class="form-group">
                             <label for="name">お名前 *</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" value="<?= $user['name']; ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="mail">Email *</label>
-                            <input type="mail" id="mail" name="mail" required>
+                            <input type="mail" id="mail" name="mail" value="<?= $user['email']; ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="tel">電話番号(ハイフンなし) *</label>
-                            <input type="number" id="tel" name="tel" required>
+                            <input type="number" id="tel" name="tel" value="<?= $user['tel']; ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="">お届け先 *</label>
                             <div class="sub-group">
                                 <label for="postcode">郵便番号(ハイフンなし)</label>
-                                <input type="number" id="postcode" name="postcode" required>
+                                <input type="number" id="postcode" name="postcode" value="<?= $user['postcode']; ?>" required>
                                 <label for="address">住所</label>
-                                <input type="text" id="address" name="address" required>
+                                <input type="text" id="address" name="address" value="<?= $user['address']; ?>" required>
                             </div>
                         </div>
                         <button class="btn btn-blue" type="submit">購入する</button>
