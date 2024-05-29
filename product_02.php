@@ -1,7 +1,7 @@
 <?php
 require_once "./encode.php";
 
-$name = e($_POST['name'] ?? '');
+$pName = e($_POST['p_name'] ?? '');
 $price = e($_POST['price'] ?? '');
 $count = e($_POST['count'] ?? '');
 
@@ -10,21 +10,21 @@ session_start();
 if (isset($_SESSION['products'])) {
     $products = $_SESSION['products'];
     foreach ($products as $key => $product) {
-        if ($key == $name) {
+        if ($key == $pName) {
             $count = (int)$count + (int)$product['count'];
         }
     }
 }
 
-if ($name != '' && $price != '' && $count != '') {
-    $_SESSION['products'][$name] = [
+if ($pName != '' && $price != '' && $count != '') {
+    $_SESSION['products'][$pName] = [
         'price' => $price,
         'count' => $count
     ];
 }
 $products = isset($_SESSION['products']) ? $_SESSION['products'] : [];
 
-if (isset($_POST['name'])) {
+if (isset($_POST['p_name'])) {
     $resultMessage = "商品をカートに追加しました";
 } else {
     $resultMessage = "";
@@ -149,7 +149,7 @@ if (isset($_POST['name'])) {
                     <form class="item-form" method="POST" action="./product_02.php">
                         <div class="amount">
                             <p class="price">\11,800 （税込）</p>
-                            <input type="hidden" name="name" value="ジェーン エア ジュヴレ シャンベルタン 2020 750ml 赤ワイン フランス ブルゴーニュ ミディアムボディ">
+                            <input type="hidden" name="p_name" value="ジェーン エア ジュヴレ シャンベルタン 2020 750ml 赤ワイン フランス ブルゴーニュ ミディアムボディ">
                             <input type="hidden" name="price" value="11800">
                             <label for="count">個数</label>
                             <input type="text" value="1" name="count" class="count" id="count">

@@ -143,6 +143,8 @@ form {
 header {
   font-size: 1.6rem;
   padding-top: 4rem !important;
+  background: #fff !important;
+  height: 120px  !important;
 }
 
 /* cart */
@@ -332,7 +334,7 @@ footer {
   line-height: 80px;
 }
 
-/* page.html */
+/* -----------------page.html------------------ */
 .page-title {
   border-bottom: 1px solid #ddd;
   padding: 20px 0 10px;
@@ -398,7 +400,8 @@ footer {
   margin: 0 auto;
 }
 
-/* login.html */
+/* -----------------login.html------------------ */
+
 .login,
 .register {
   width: 55%;
@@ -439,8 +442,8 @@ footer {
   margin-bottom: 10px;
 }
 
+/* -----------------shop.php------------------ */
 
-/* shop */
 .itemlist ul:after {
   content: "";
   clear: both;
@@ -471,6 +474,39 @@ footer {
   width: 20px;
   padding: 0 5px;
   text-align: right;
+}
+
+/* -----------------pay.php------------------ */
+.pay_form {
+  background: #ddd;
+  font-size: 1.6rem;
+}
+
+.pay_form_container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 6rem 0;
+}
+
+.pay_form label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.pay_form input {
+  width: 100%;
+}
+
+.pay_form .sub-group {
+  padding-left: 2rem;
+}
+
+.pay_form .sub-group label:last-of-type {
+  margin-top: 1.4rem;
+}
+
+.pay_form button {
+  margin-top: 4rem;
 }
 
 
