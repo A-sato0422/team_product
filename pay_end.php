@@ -26,6 +26,7 @@ try {
     print "エラーメッセージ:" . $e->getMessage();
 }
 
+// orderテーブルのSQL
 $stt = $db->prepare('INSERT INTO orders (name, mail, tel, postcode, address, total, created_at, updated_at) VALUES (:name, :mail, :tel, :postcode, :address, :total, now(), now())');
 $stt->bindValue(':name', $name);
 $stt->bindValue(':mail', $mail);
@@ -34,6 +35,21 @@ $stt->bindValue(':postcode', $postcode);
 $stt->bindValue(':address', $address);
 $stt->bindValue(':total', $total);
 $stt->execute();
+
+// ordersのid取得
+$order_id = $db->lastInsertId();
+
+// order_productsテーブルのSQL
+foreach ($products as $key => $product) {
+    $stt2 = $db->prepare('INSERT INTO order_products (order_id, product_name, num, price) VALUES (:order_id, :product_name, :num, :price)');
+    $stt2->bindValue(':order_id', $order_id);
+    $stt2->bindValue(':product_name', $key);
+    $stt2->bindValue(':num', $product['count']);
+    $stt2->bindValue(':price', $product['price']);
+    $stt2->execute();
+}
+
+unset($_SESSION['products']);
 ?>
 
 <!DOCTYPE html>
