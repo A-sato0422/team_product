@@ -9,14 +9,13 @@ $mail = e($_POST['mail'] ?? '');
 $tel = e($_POST['tel'] ?? '');
 $postcode = e($_POST['postcode'] ?? '');
 $address = e($_POST['address'] ?? '');
-print $name;
 
 session_start();
 $products = $_SESSION['products'] ?? [];
 $total = 0;
 $subtotal = 0;
 // カートの合計の計算
-foreach ($products as $name => $product) {
+foreach ($products as $key => $product) {
     $subtotal = (int)$product['price'] * (int)$product['count'];
     $total += $subtotal;
 }
