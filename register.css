@@ -58,9 +58,16 @@ img {
     max-width: 100%;
 }
 
+/* header section */
+header {
+    font-size: 1.6rem;
+    padding-top: 4rem !important;
+  }
+
 /* register.html用CSS */
 .register {
     font-size: 2rem;
+    margin-top: 10rem;
 }
 
 .register .container {

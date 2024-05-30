@@ -72,7 +72,7 @@ $products = isset($_SESSION['products']) ? $_SESSION['products'] : [];
     <link rel="icon" href="favicon.ico">
 
     <!-- css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./cart.css">
     <!-- <link rel="stylesheet" href="responsive.css"> -->
 
     <!-- icon -->

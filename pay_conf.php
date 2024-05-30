@@ -1,21 +1,14 @@
 <?php
-require_once './encode.php';
-session_start();
+require_once "./encode.php";
 
-//delete_nameが送信された商品名を削除 
-$delete_name = e($_POST['delete_name'] ?? '');
-if ($delete_name != '') unset($_SESSION['products'][$delete_name]);
-
-$products = $_SESSION['products'] ?? [];
-$total = 0;
-$subtotal = 0;
-// カートの合計の計算
-foreach ($products as $pName => $product) {
-    $subtotal = (int)$product['price'] * (int)$product['count'];
-    $total += $subtotal;
-}
+$name = e($_POST['name'] ?? "");
+$mail = e($_POST['mail'] ?? "");
+$tel = e($_POST['tel'] ?? "");
+$postcode = e($_POST['postcode'] ?? "test");
+$address = e($_POST['address'] ?? "");
 
 ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -38,7 +31,7 @@ foreach ($products as $pName => $product) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>買い物かご｜SQUARE, inc.</title>
+    <title>購入手続き｜SQUARE, inc.</title>
     <meta name="description" content="ここにサイトの説明文">
 
     <meta property="og:title" content="SQUARE, inc." />
@@ -111,49 +104,43 @@ foreach ($products as $pName => $product) {
         <div class="wrapper last-wrapper">
             <div class="container">
                 <div class="wrapper-title">
-                    <h3>MY CART</h3>
-                    <p>カート</p>
+                    <h3>PAYMENT</h3>
+                    <p>購入手続き</p>
                 </div>
-                <div class="cartlist">
-                    <table class="cart-table">
-                        <thead>
-                            <tr>
-                                <th>商品名</th>
-                                <th>価格</th>
-                                <th>個数</th>
-                                <th>小計</th>
-                                <th>操作</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php foreach ($products as $pName => $product) : ?>
-                                <tr>
-                                    <td label="商品名："><?= $pName; ?></td>
-                                    <td label="価格：" class="text-right"><?= $product['price']; ?></td>
-                                    <td label="個数：" class="text-right"><?= $product['count']; ?></td>
-                                    <td label="小計：" class="text-right"><?= $product['price'] * $product['count']; ?></td>
-                                    <td>
-                                        <form action="cart.php" method="POST">
-                                            <input type="hidden" name="delete_name" value="<?= $pName; ?>">
-                                            <button type="submit" class="btn btn-red">削除</button>
-                                        </form>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
-                            <tr class="total">
-                                <th colspan="3">合計</th>
-                                <td colspan="2"><?= $total; ?></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="cart-btn">
-                        <button type="button" class="btn btn-blue" onclick="location.href='pay.php'" 
-                        <?php if(empty($products)) echo 'disabled="disabled"' ?>>購入手続きへ</button>
-                        <a href="./index.html">
-                            <button type="button" class="btn btn-gray">お買い物を続ける</button>
-                        </a>
+                <form class="pay_form" action="pay_end.php" method="POST">
+                    <div class="pay_form_container">
+                        <div class="form-group">
+                            <label for="name">お名前 *</label>
+                            <p><?= $name; ?></p>
+                            <input type="hidden" name="name" value="<?= $name; ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="mail">Email *</label>
+                            <p><?= $mail; ?></p>
+                            <input type="hidden" name="mail" value="<?= $mail; ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">電話番号 *</label>
+                            <p><?= $tel; ?></p>
+                            <input type="hidden" name="tel" value="<?= $tel; ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="">お届け先 *</label>
+                            <div class="sub-group">
+                                <label for="postcode">郵便番号</label>
+                                <p><?= $postcode; ?></p>
+                                <input type="hidden" name="postcode" value="<?= $postcode; ?>">
+                                <label for="address">住所</label>
+                                <p><?= $address; ?></p>
+                                <input type="hidden" name="address" value="<?= $address; ?>">
+                            </div>
+                        </div>
+                        <p>この内容で送信してよろしいですか？</p>
+                        <button class="btn btn-blue" type="submit">購入する</button>
+                        <button class="btn btn-gray" type="button" onclick="location.href='./pay.php'">修正する</button>
                     </div>
-                </div>
+                </form>
+
             </div>
         </div>
     </main>
