@@ -39,9 +39,9 @@ header {
 }
 
 .slide-items {
-  width: 100%;
+  width: 120%;
   display: flex;
-  max-width: 80%;
+  max-width: 95%;
   margin: auto;
 }
 
@@ -52,8 +52,8 @@ header {
 }
 
 .slide-items img {
-  width: 100%;
-  height: 100%;
+  width: 120%;
+  height: 120%;
   object-fit: cover;
 }
 
@@ -219,7 +219,7 @@ nav {
   background-color: aliceblue;
   border: 1px solid #ccc;
   border-radius: 5px;
-  height: 100px;
+  height: 160px;
   text-align: center;
   transition: background-color 0.3s;
 }
@@ -239,37 +239,37 @@ nav {
 } 
 
 .category1 .button01 {
-  background-image: url("./img/button_beer.png");
+  background-image: url("./img/button_wine.png");
   background-position: center;
   background-size: cover;
 }
 
 .category1 .button02 {
-  background-image: url("./img/button_brandy.png");
-  background-position: center;
-  background-size: cover;
-}
-
-.category1 .button03 {
   background-image: url("./img/button_cahmpagne.png");
   background-position: center;
   background-size: cover;
 }
 
+.category1 .button03 {
+  background-image: url("./img/button_whiskey.png");
+  background-position: center;
+  background-size: cover;
+}
+
 .category1 .button04 {
-  background-image: url("./img/button_japanese_sake.png");
+  background-image: url("./img/button_brandy.png");
   background-position: center;
   background-size: cover;
 }
 
 .category1 .button05 {
-  background-image: url("./img/button_liqueur.png");
+  background-image: url("./img/button_shochu.png");
   background-position: center;
   background-size: cover;
 }
 
 .category1 .button06 {
-  background-image: url("./img/button_shochu.png");
+  background-image: url("./img/button_japanese_sake.png");
   background-position: center;
   background-size: cover;
 }
@@ -281,13 +281,13 @@ nav {
 }
 
 .category1 .button08 {
-  background-image: url("./img/button_whiskey.png");
+  background-image: url("./img/button_beer.png");
   background-position: center;
   background-size: cover;
 }
 
 .category1 .button09 {
-  background-image: url("./img/button_wine.png");
+  background-image: url("./img/button_liqueur.png");
   background-position: center;
   background-size: cover;
 }
