@@ -8,8 +8,11 @@
     <!-- slickのCSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
+    <!-- 無料ライブラリ Boxicons の追加 -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <!-- オリジナル CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dropdown_UI.css">
     <title>B班課題制作</title>
 </head>
 
@@ -57,9 +60,24 @@
                 <a href="./cart.php">
                     <img src="./img/cart.svg" alt="カート" width="25px" height="25px">
                 </a>
-                <a href="./register.html">
-                    <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">
-                </a>
+                <div class="dropdown-container">
+                    <button class="btn" id="btn">
+                        <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">
+                        アカウント
+                        <i class="bx bx-chevron-down" id="arrow"></i>
+                    </button>
+
+                    <div class="dropdown" id="dropdown">
+                        <a href="./register.php">
+                            <i class="bx bx-plus-circle"></i>
+                            新規会員登録
+                        </a>
+                        <a href="./login.php">
+                            <i class="bx bx-user"></i>
+                            ログイン
+                        </a>
+                    </div>
+                </div>
             </ul>
         </nav>
     </header>

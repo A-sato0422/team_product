@@ -115,7 +115,7 @@ if (isset($_POST['p_name'])) {
                 <a href="./cart.php">
                     <img src="./img/cart.svg" alt="カート" width="25px" height="25px">
                 </a>
-                <a href="./register.html">
+                <a href="./register.php">
                     <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">
                 </a>
             </ul>

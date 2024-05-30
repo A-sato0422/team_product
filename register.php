@@ -53,7 +53,7 @@
                 <a href="./cart.php">
                     <img src="./img/cart.svg" alt="カート" width="25px" height="25px">
                 </a>
-                <a href="./register.html">
+                <a href="./register.php">
                     <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">
                 </a>
             </ul>
@@ -81,14 +81,21 @@
                     <input type="password" id="password" name="password" placeholder="8桁以上の半角英数字でお願いします" required>
                 </div>
                 <div class="form-group">
+                    <label for="tel">電話番号(ハイフンなし) *</label><br>
+                    <input type="number" id="tel" name="tel" placeholder="08011112222" required>
+                </div>
+                <div class="form-group">
+                    <label for="postcode">郵便番号(ハイフンなし) *</label><br>
+                    <input type="number" id="postcode" name="postcode" placeholder="0001234" required>
+                </div>
+                <div class="form-group">
                     <label for="address">住所 *</label><br>
                     <input type="text" id="address" name="address" placeholder="〇〇県○○市○○町1-1 ハイツ111号室" required>
                 </div>
                 <div class="form-group">
                     <h4>地酒.comからのお知らせを受信しますか？</h4>
                     <input type="hidden" class="dm" name="dm" value="受信しない">
-                    <input type="checkbox" class="dm" name="dm" value="受信する"><span class="select-value"
-                        checked>受信する</span>
+                    <input type="checkbox" class="dm" name="dm" value="受信する"><span class="select-value" checked>受信する</span>
                 </div>
                 <input type="submit" value="内容を確認する">
             </form>

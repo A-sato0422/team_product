@@ -6,7 +6,7 @@ $price = e($_POST['price'] ?? '');
 $count = e($_POST['count'] ?? '');
 
 session_start();
-// カートにすでに商品がはいいている場合、個数を追加する
+// カートにすでに商品が入っている場合、個数を追加する
 if (isset($_SESSION['products'])) {
     $products = $_SESSION['products'];
     foreach ($products as $key => $product) {
@@ -115,7 +115,7 @@ if (isset($_POST['name'])) {
                 <a href="./cart.php">
                     <img src="./img/cart.svg" alt="カート" width="25px" height="25px">
                 </a>
-                <a href="./register.html">
+                <a href="./register.php">
                     <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">
                 </a>
             </ul>

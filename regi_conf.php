@@ -4,6 +4,8 @@ require_once "./encode.php";
 $name = e($_POST['name'] ?? '');
 $email = e($_POST['email'] ?? '');
 $password = e($_POST['password'] ?? '');
+$tel = e($_POST['tel'] ?? '');
+$postcode = e($_POST['postcode'] ?? '');
 $address = e($_POST['address'] ?? '');
 $dm = e($_POST['dm'] ?? '');
 ?>
@@ -39,6 +41,16 @@ $dm = e($_POST['dm'] ?? '');
                     <p>パスワード *</p>
                     <p><?= $password; ?></p>
                     <input type="hidden" name="password" value="<?= $password; ?>">
+                </div>
+                <div class="confirm-group">
+                    <p>電話番号 *</p>
+                    <p><?= $tel; ?></p>
+                    <input type="hidden" name="tel" value="<?= $tel; ?>">
+                </div>
+                <div class="confirm-group">
+                    <p>郵便番号 *</p>
+                    <p><?= $postcode; ?></p>
+                    <input type="hidden" name="postcode" value="<?= $postcode; ?>">
                 </div>
                 <div class="confirm-group">
                     <p>住所 *</p>

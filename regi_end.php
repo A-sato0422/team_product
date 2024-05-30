@@ -7,9 +7,37 @@ require_once "./db_manager.php";
 $name = e($_POST['name'] ?? '');
 $email = e($_POST['email'] ?? '');
 $password = e($_POST['password'] ?? '');
+$tel = e($_POST['tel'] ?? '');
+$postcode = e($_POST['postcode'] ?? '');
 $address = e($_POST['address'] ?? '');
 $dm = e($_POST['dm'] ?? '');
 $dm_flag = ($dm == '受信する') ? 1 : 0;
+
+session_start();
+if ($name != '' && $email != '' && $tel != '' && $postcode != '' && $address != '') {
+    $_SESSION['user'] = [
+        'name' => $name,
+        'email' => $email,
+        'tel' => $tel,
+        'postcode' => $postcode,
+        'address' => $address,
+    ];
+}
+$user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
+
+// 画面上部にセッション情報を表示
+// if (isset($user)) {
+//     echo $user['name'];
+//     echo "<br>";
+//     echo $user['email'];
+//     echo "<br>";
+//     echo $user['tel'];
+//     echo "<br>";
+//     echo $user['postcode'];
+//     echo "<br>";
+//     echo $user['address'];
+//     echo "<br>";
+// }
 
 try {
     $db = getDb();
