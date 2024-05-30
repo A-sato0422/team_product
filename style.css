@@ -16,6 +16,8 @@ header {
   z-index: 100;
 }
 
+
+
 .title {
   display: flex;
   justify-content: flex-start;
@@ -244,8 +246,26 @@ nav {
   text-align: center;
   color: #333;
   padding-top: 50px;
-  padding-bottom: 50px; 
+  padding-bottom: 50px;  
+  background-image: url(./img/SELECTION.png);
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
 } 
+
+.bestseller {
+  display: block;
+  font-size: 1.5em;
+  margin: 20px 0 10px 0;
+  text-align: center;
+  color: #333;
+  padding-top: 50px;
+  padding-bottom: 50px;  
+  background-image: url(./img/BESTSELLER.png);
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
 
 .category1 .button01 {
   background-image: url("./img/button_wine.png");
@@ -304,7 +324,7 @@ nav {
 /* 商品コンテナのスタイル */
 .bestsellers-section {
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
 }
 
 .bestsellers-section h2 {
@@ -338,6 +358,10 @@ nav {
   font-size: 16px;
   font-weight: bold;
   margin: 10px 0 5px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; 
 }
 
 .product-description {
@@ -350,6 +374,10 @@ footer {
   color: #090000;
   margin-top: 100px;
   text-align: center;
+  background-image: url(./img/JIZAKE.com.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
 }
 
 .footer-content {
@@ -392,6 +420,7 @@ footer {
   font-size: 18px;
   text-align: center;
 }
+
 
 .cash-icons {
   display: flex;
