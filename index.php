@@ -49,7 +49,7 @@
 
             <ul class="menu-group" id="menu-group">
                 <a href="#">
-                    <img src="./img/地酒.com 候補2.png" alt="ホームページロゴ" width="15%" height="15%">
+                    <img src="./img/地酒.com 候補5.png" alt="ホームページロゴ" width="15%" height="15%">
                 </a>
                 <li class="menu-item"><a href="./list_page.html">商品を探す</a></li>
                 <li class="menu-item"><a href="#">特集一覧</a></li>
