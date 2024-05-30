@@ -68,7 +68,7 @@ unset($_SESSION['products']);
             <div class="register-title">
                 <h2>購入が完了しました</h2>
                 <h4>お買い上げいただき誠にありがとうございました。</h4>
-                <a href="./index.html">
+                <a href="./index.php">
                     <button class="btn-top">お買い物を続ける</button>
                 </a>
             </div>

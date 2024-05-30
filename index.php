@@ -35,7 +35,7 @@
             <!-- menu-content -->
             <div id="menu-content">
                 <ul class="overlay-items">
-                    <li><a href="./list_page.html" class="overlay-item">商品を探す</a></li>
+                    <li><a href="./list_page.php" class="overlay-item">商品を探す</a></li>
                     <li><a href="#" class="overlay-item">特集一覧</a></li>
                     <li><a href="#" class="overlay-item">お気に入り</a></li>
                     <li><a href="#" class="overlay-item">ご利用ガイド</a></li>
@@ -51,7 +51,7 @@
                 <a href="#">
                     <img src="./img/wine.svg" alt="ホームページロゴ" width="45px" height="45px">
                 </a>
-                <li class="menu-item"><a href="./list_page.html">商品を探す</a></li>
+                <li class="menu-item"><a href="./list_page.php">商品を探す</a></li>
                 <li class="menu-item"><a href="#">特集一覧</a></li>
                 <li class="menu-item"><a href="#">お気に入り</a></li>
                 <li class="menu-item"><a href="#">ご利用ガイド</a></li>
@@ -72,9 +72,9 @@
                             <i class="bx bx-plus-circle"></i>
                             新規会員登録
                         </a>
-                        <a href="./login.php">
+                        <a href="<?php isset($_SESSION['user']) ? print "./logout.php" : print "login.php" ?>">
                             <i class="bx bx-user"></i>
-                            ログイン
+                            <?php isset($_SESSION['user']) ? print "ログアウト" : print "ログイン"  ?>
                         </a>
                     </div>
                 </div>

@@ -88,7 +88,7 @@ if (isset($_POST['p_name'])) {
             <!-- menu-content -->
             <div id="menu-content">
                 <ul class="overlay-items">
-                    <li><a href="./list_page.html" class="overlay-item">商品を探す</a></li>
+                    <li><a href="./list_page.php" class="overlay-item">商品を探す</a></li>
                     <li><a href="#" class="overlay-item">特集一覧</a></li>
                     <li><a href="#" class="overlay-item">お気に入り</a></li>
                     <li><a href="#" class="overlay-item">ご利用ガイド</a></li>
@@ -101,11 +101,11 @@ if (isset($_POST['p_name'])) {
             </div>
 
             <ul class="menu-group" id="menu-group">
-                <a href="./index.html">
+                <a href="./index.php">
                     <img src="./img/wine.svg" alt="ホームページロゴ" width="45px" height="45px">
                 </a>
                 <div>
-                    <li class="menu-item"><a href="./list_page.html">商品を探す</a></li>
+                    <li class="menu-item"><a href="./list_page.php">商品を探す</a></li>
                     <li class="menu-item"><a href="#">特集一覧</a></li>
                     <li class="menu-item"><a href="#">お気に入り</a></li>
                     <li class="menu-item"><a href="#">ご利用ガイド</a></li>
