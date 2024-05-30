@@ -112,32 +112,52 @@
         <h2>ベストセラー</h2>
         <div class="product-container">
             <div class="product">
-                <img src="./img/carousel01.jpg" alt="商品1">
+                <img src="./img/wine1.webp" alt="商品1">
                 <p class="product-name">商品名1</p>
                 <p class="product-description">商品の説明1</p>
             </div>
             <div class="product">
-                <img src="./img/carousel01.jpg" alt="商品1">
+                <img src="./img/wine2.webp" alt="商品1">
                 <p class="product-name">商品名1</p>
                 <p class="product-description">商品の説明1</p>
             </div>
             <div class="product">
-                <img src="./img/carousel01.jpg" alt="商品1">
+                <img src="./img/wine3.webp" alt="商品1">
                 <p class="product-name">商品名1</p>
                 <p class="product-description">商品の説明1</p>
             </div>
             <div class="product">
-                <img src="./img/carousel01.jpg" alt="商品1">
+                <img src="./img/wine4.webp" alt="商品1">
                 <p class="product-name">商品名1</p>
                 <p class="product-description">商品の説明1</p>
             </div>
             <div class="product">
-                <img src="./img/carousel01.jpg" alt="商品1">
+                <img src="./img/wine5.webp" alt="商品1">
                 <p class="product-name">商品名1</p>
                 <p class="product-description">商品の説明1</p>
             </div>
             <div class="product">
-                <img src="./img/carousel01.jpg" alt="商品1">
+                <img src="./img/wine6.webp" alt="商品1">
+                <p class="product-name">商品名1</p>
+                <p class="product-description">商品の説明1</p>
+            </div>
+            <div class="product">
+                <img src="./img/wine7.webp" alt="商品1">
+                <p class="product-name">商品名1</p>
+                <p class="product-description">商品の説明1</p>
+            </div>
+            <div class="product">
+                <img src="./img/wine8.webp" alt="商品1">
+                <p class="product-name">商品名1</p>
+                <p class="product-description">商品の説明1</p>
+            </div>
+            <div class="product">
+                <img src="./img/wine9.webp" alt="商品1">
+                <p class="product-name">商品名1</p>
+                <p class="product-description">商品の説明1</p>
+            </div>
+            <div class="product">
+                <img src="./img/wine10.webp" alt="商品1">
                 <p class="product-name">商品名1</p>
                 <p class="product-description">商品の説明1</p>
             </div>
