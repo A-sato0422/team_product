@@ -39,9 +39,9 @@ header {
 }
 
 .slide-items {
-  width: 100%;
+  width: 120%;
   display: flex;
-  max-width: 80%;
+  max-width: 95%;
   margin: auto;
 }
 
@@ -52,8 +52,8 @@ header {
 }
 
 .slide-items img {
-  width: 100%;
-  height: 100%;
+  width: 120%;
+  height: 120%;
   object-fit: cover;
 }
 
@@ -218,7 +218,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  max-width: 600px;
+  /* max-width: 600px; */
 }
 
 .category1 li {
@@ -228,7 +228,7 @@ nav {
   background-color: aliceblue;
   border: 1px solid #ccc;
   border-radius: 5px;
-  height: 100px;
+  height: 160px;
   text-align: center;
   transition: background-color 0.3s;
 }
@@ -242,27 +242,63 @@ nav {
   font-size: 1.5em;
   margin: 20px 0 10px 0;
   text-align: center;
-  /* 中央揃え */
   color: #333;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 50px; 
+} 
+
+.category1 .button01 {
+  background-image: url("./img/button_wine.png");
+  background-position: center;
+  background-size: cover;
 }
 
-.category-wine,
-.category-champa,
-.category-whiskey,
-.category-brandy,
-.category-shochu,
-.category-japasake,
-.category-spirits,
-.category-beer,
-.category-liqueur {
-  display: block;
-  width: 200px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.category1 .button02 {
+  background-image: url("./img/button_cahmpagne.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.category1 .button03 {
+  background-image: url("./img/button_whiskey.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.category1 .button04 {
+  background-image: url("./img/button_brandy.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.category1 .button05 {
+  background-image: url("./img/button_shochu.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.category1 .button06 {
+  background-image: url("./img/button_japanese_sake.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.category1 .button07 {
+  background-image: url("./img/button_spirits.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.category1 .button08 {
+  background-image: url("./img/button_beer.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.category1 .button09 {
+  background-image: url("./img/button_liqueur.png");
+  background-position: center;
+  background-size: cover;
 }
 
 /* 商品コンテナのスタイル */
