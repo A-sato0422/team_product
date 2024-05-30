@@ -106,7 +106,7 @@ $products = isset($_SESSION['products']) ? $_SESSION['products'] : [];
                     <li><a href="index.php#news">お知らせ</a></li>
                     <li><a href="index.php#about">会社概要</a></li>
                     <li><a href="ブログのURL">ブログ</a></li>
-                    <li><a href="register.html">会員登録</a></li>
+                    <li><a href="register.php">会員登録</a></li>
                 </ul>
             </nav>
 

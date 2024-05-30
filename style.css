@@ -185,7 +185,7 @@ nav {
   padding: 40px 20px 0;
 }
 
-#menu-content .overlay-login  li {
+#menu-content .overlay-login li {
   margin-bottom: 10px;
 }
 
@@ -418,6 +418,20 @@ footer {
 }
 
 @media (max-width: 1024px) {
+
+  /* SP menu 表示 */
+  .menu {
+    display: block;
+  }
+
+  /* PC menu 非表示 */
+  .menu-group {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
   .footer-content {
     flex-direction: column;
     align-items: center;
@@ -448,18 +462,7 @@ footer {
     margin: 10px 0;
   }
 
-  /* SP menu 表示 */
-  .menu {
-    display: block;
-  }
 
-  /* PC menu 非表示 */
-  .menu-group {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-  }
 
   /* チェックボックスの非表示 */
   #menu-toggle {
