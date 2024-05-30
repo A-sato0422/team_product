@@ -1,63 +1,126 @@
-/* 共通 */
-.container {
-  padding: 1.5% 8%;
+/* common section */
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-form > p, .container > p {
-  text-align: center;
-  font-size: 24px;
-  padding-bottom: 20px;
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
-label {
-  padding-top: 7px;
+body {
+    font-family: "Zen Antique", serif;
+    background-color: rgb(236, 244, 241);
 }
 
-.form-group {
-  margin-bottom: 0;
+section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+text-align: center;
+
 }
 
-/* contact.html */
-.require_item {
-  background-color: #ff0000;
-  color: #fff;
-  text-align: center;
-  width: 62.5%;
-  padding: 3.75% 0;
-  float: right;
+h2 {
+    position: relative;
+    z-index: 1;
+    font-size: 2.5rem;
+    font-weight: 500;
 }
 
-.error_msg {
-  font-size: 14px;
-  color: #ff0000;
-  height: 14px;
+h4 {
+    font-size: 1.6rem;
 }
 
-/* confirm.html */
-.display_item {
-  padding: 7px 0;
-  margin-bottom: 30px;
+p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    letter-spacing: 0.1rem;
 }
 
 a {
-  color: #000;
-  border: solid 0.5px rgb(173, 173, 173);
-  background-color: #f7f7f7;
-  padding: 3.5px 20px;
+    text-decoration: none;
+    color: inherit;
 }
 
-a:hover {
-  text-decoration: none;
-  color: #000;
-}
-
-/* thanks.html */
-.thanks_msg {
-  text-align: center;
-  background-color: #c8fbff;
-  padding:20px 0 20px;
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 img {
-  border-radius: 50%;
+    max-width: 100%;
+}
+
+/* contact.php contact_conf.php共通CSS */
+
+ .contact-title {
+    padding-top: 2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+/* contact.php用CSS */
+
+.require {
+  color: red;
+}
+
+label {
+font-size: 12px;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+textarea {
+height: 80px;
+width: 230px;
+margin-bottom: 10px;
+}
+
+.error_msg {
+color: red;
+margin-bottom: 20px;
+font-weight: bold;
+}
+
+/* contact-conf.php用CSS */
+
+.contact-conf-form-group {
+  margin-top: 20px;
+}
+
+ .display_item {
+  font-weight: bold;
+}
+
+.submit {
+  text-decoration: none;
+  background-image: linear-gradient(#9be1e5,#21caca);
+  border-radius: 5px;
+  cursor: pointer;
+  color: rgb(1, 39, 33);
+  font-weight: 600;
+}
+
+.revers {
+  background-color: #999f9fe7;
+  border-radius: 5px;
+  color: rgb(2, 74, 63);;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+/* contact_thanks.html用CSS */
+
+.thanks_msg {
+margin-top: 20px;
+margin-bottom: 20px;
 }
