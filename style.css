@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+body {
+  font-family: "Zen Antique", serif;
+}
+
 header {
   background-color: #fff;
   color: #333;
@@ -244,8 +248,8 @@ nav {
   text-align: center;
   color: #333;
   padding-top: 50px;
-  padding-bottom: 50px; 
-} 
+  padding-bottom: 50px;
+}
 
 .category1 .button01 {
   background-image: url("./img/button_wine.png");
