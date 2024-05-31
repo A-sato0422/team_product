@@ -1,6 +1,6 @@
 <?php
 function getDb() : PDO {
-  $dsn = 'mysql:dbname=team_product_db; host=127.0.0.1; charset=utf8';
+  $dsn = 'mysql:dbname=LAA1586069-teamb; host=	mysql305.phy.lolipop.lan; charset=utf8';
   $usr = 'root';
   $passwd = '';
 
