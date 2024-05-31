@@ -1,6 +1,7 @@
 <?php
 require_once './encode.php';
 session_start();
+$user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
 
 //delete_nameが送信された商品名を削除 
 $delete_name = e($_POST['delete_name'] ?? '');
@@ -52,6 +53,8 @@ foreach ($products as $pName => $product) {
     <!-- css -->
     <link rel="stylesheet" href="./cart.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./dropdown_UI.css">
+
     <!-- icon -->
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 </head>
@@ -60,7 +63,7 @@ foreach ($products as $pName => $product) {
     <header>
         <nav class="nav">
             <!-- <input type="checkbox" id="menu-toggle" class="checkbox-visually-hidden"> -->
-            <!-- <p for="menu-toggle" class="menu-toggle-label">14時まで即日配送</p> -->
+            <!-- <label for="menu-toggle" class="menu-toggle-label">14時まで即日配送</label> -->
             <!-- スマホ用 menu icon -->
             <div class="menu">
                 <div class="nav-icon" id="menu-icon">
@@ -75,7 +78,7 @@ foreach ($products as $pName => $product) {
             <!-- menu-content -->
             <div id="menu-content">
                 <ul class="overlay-items">
-                    <li><a href="./list_page.html" class="overlay-item">商品を探す</a></li>
+                    <li><a href="./list_page.php" class="overlay-item">商品を探す</a></li>
                     <li><a href="#" class="overlay-item">特集一覧</a></li>
                     <li><a href="#" class="overlay-item">お気に入り</a></li>
                     <li><a href="#" class="overlay-item">ご利用ガイド</a></li>
@@ -88,10 +91,10 @@ foreach ($products as $pName => $product) {
             </div>
 
             <ul class="menu-group" id="menu-group">
-                <a href="./index.html">
+                <a href="index.php">
                     <img src="./img/wine.svg" alt="ホームページロゴ" width="45px" height="45px">
                 </a>
-                <li class="menu-item"><a href="./list_page.html">商品を探す</a></li>
+                <li class="menu-item"><a href="./list_page.php">商品を探す</a></li>
                 <li class="menu-item"><a href="#">特集一覧</a></li>
                 <li class="menu-item"><a href="#">お気に入り</a></li>
                 <li class="menu-item"><a href="#">ご利用ガイド</a></li>
@@ -100,9 +103,24 @@ foreach ($products as $pName => $product) {
                 <a href="./cart.php">
                     <img src="./img/cart.svg" alt="カート" width="25px" height="25px">
                 </a>
-                <a href="./register.php">
-                    <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">
-                </a>
+                <div class="dropdown-container">
+                    <button class="btn" id="btn">
+                        <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">
+                        <?php isset($user['name']) ? print $user['name'] . "さん" : print "アカウント"; ?>
+                        <i class="bx bx-chevron-down" id="arrow"></i>
+                    </button>
+
+                    <div class="dropdown" id="dropdown">
+                        <a href="./register.php">
+                            <i class="bx bx-plus-circle"></i>
+                            新規会員登録
+                        </a>
+                        <a href="<?php isset($_SESSION['user']) ? print "./logout.php" : print "login.php" ?>">
+                            <i class="bx bx-user"></i>
+                            <?php isset($_SESSION['user']) ? print "ログアウト" : print "ログイン"  ?>
+                        </a>
+                    </div>
+                </div>
             </ul>
         </nav>
     </header>
@@ -147,9 +165,8 @@ foreach ($products as $pName => $product) {
                         </tbody>
                     </table>
                     <div class="cart-btn">
-                        <button type="button" class="btn btn-blue" onclick="location.href='pay.php'" 
-                        <?php if(empty($products)) echo 'disabled="disabled"' ?>>購入手続きへ</button>
-                        <a href="./index.html">
+                        <button type="button" class="btn btn-blue" onclick="location.href='pay.php'" <?php if (empty($products)) echo 'disabled="disabled"' ?>>購入手続きへ</button>
+                        <a href="./index.php">
                             <button type="button" class="btn btn-gray">お買い物を続ける</button>
                         </a>
                     </div>

@@ -1,3 +1,22 @@
+<?php
+session_start();
+$user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
+
+// 画面上部にセッション情報を表示
+if ($user) {
+    echo $user['name'];
+    echo "<br>";
+    echo $user['email'];
+    echo "<br>";
+    echo $user['tel'];
+    echo "<br>";
+    echo $user['postcode'];
+    echo "<br>";
+    echo $user['address'];
+    echo "<br>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -35,7 +54,7 @@
             <!-- menu-content -->
             <div id="menu-content">
                 <ul class="overlay-items">
-                    <li><a href="./list_page.html" class="overlay-item">商品を探す</a></li>
+                    <li><a href="./list_page.php" class="overlay-item">商品を探す</a></li>
                     <li><a href="#" class="overlay-item">特集一覧</a></li>
                     <li><a href="#" class="overlay-item">お気に入り</a></li>
                     <li><a href="#" class="overlay-item">ご利用ガイド</a></li>
@@ -51,7 +70,7 @@
                 <a href="#">
                     <img src="./img/wine.svg" alt="ホームページロゴ" width="45px" height="45px">
                 </a>
-                <li class="menu-item"><a href="./list_page.html">商品を探す</a></li>
+                <li class="menu-item"><a href="./list_page.php">商品を探す</a></li>
                 <li class="menu-item"><a href="#">特集一覧</a></li>
                 <li class="menu-item"><a href="#">お気に入り</a></li>
                 <li class="menu-item"><a href="#">ご利用ガイド</a></li>
@@ -63,7 +82,7 @@
                 <div class="dropdown-container">
                     <button class="btn" id="btn">
                         <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">
-                        アカウント
+                        <?php isset($user['name']) ? print $user['name'] . "さん" : print "アカウント"; ?>
                         <i class="bx bx-chevron-down" id="arrow"></i>
                     </button>
 
@@ -72,9 +91,9 @@
                             <i class="bx bx-plus-circle"></i>
                             新規会員登録
                         </a>
-                        <a href="./login.php">
+                        <a href="<?php isset($_SESSION['user']) ? print "./logout.php" : print "login.php" ?>">
                             <i class="bx bx-user"></i>
-                            ログイン
+                            <?php isset($_SESSION['user']) ? print "ログアウト" : print "ログイン"  ?>
                         </a>
                     </div>
                 </div>
@@ -93,7 +112,7 @@
     </div>
 
     <div class="category1">
-        <span class="Liquorsearch">お酒を探す</span>  
+        <span class="Liquorsearch">お酒を探す</span>
         <ul>
             <li class="button01"></li>
             <li class="button02"></li>
@@ -105,7 +124,7 @@
             <li class="button08"></li>
             <li class="button09"></li>
 
-          
+
         </ul>
     </div>
     <div class="bestsellers-section">
