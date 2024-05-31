@@ -1,0 +1,126 @@
+/* common section */
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Zen Antique", serif;
+    background-color: rgb(236, 244, 241);
+}
+
+section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+text-align: center;
+
+}
+
+h2 {
+    position: relative;
+    z-index: 1;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+
+p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    letter-spacing: 0.1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* contact.php contact_conf.php共通CSS */
+
+ .contact-title {
+    padding-top: 2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+/* contact.php用CSS */
+
+.require {
+  color: red;
+}
+
+label {
+font-size: 12px;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+textarea {
+height: 80px;
+width: 230px;
+margin-bottom: 10px;
+}
+
+.error_msg {
+color: red;
+margin-bottom: 20px;
+font-weight: bold;
+}
+
+/* contact-conf.php用CSS */
+
+.contact-conf-form-group {
+  margin-top: 20px;
+}
+
+ .display_item {
+  font-weight: bold;
+}
+
+.submit {
+  text-decoration: none;
+  background-image: linear-gradient(#9be1e5,#21caca);
+  border-radius: 5px;
+  cursor: pointer;
+  color: rgb(1, 39, 33);
+  font-weight: 600;
+}
+
+.revers {
+  background-color: #999f9fe7;
+  border-radius: 5px;
+  color: rgb(2, 74, 63);;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+/* contact_thanks.html用CSS */
+
+.thanks_msg {
+margin-top: 20px;
+margin-bottom: 20px;
+}

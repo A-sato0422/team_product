@@ -1,6 +1,9 @@
 <?php
 require_once "./encode.php";
 
+session_start();
+$user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
+
 $name = e($_POST['name'] ?? '');
 $price = e($_POST['price'] ?? '');
 $count = e($_POST['count'] ?? '');
@@ -66,6 +69,7 @@ if (isset($_POST['name'])) {
 <link rel="stylesheet" href="./list_page.css">
 <link rel="stylesheet" href="./product.css">
 <link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./dropdown_UI.css">
 
 <body id="top" class="font-poppins">
 
@@ -88,7 +92,7 @@ if (isset($_POST['name'])) {
             <!-- menu-content -->
             <div id="menu-content">
                 <ul class="overlay-items">
-                    <li><a href="./list_page.html" class="overlay-item">商品を探す</a></li>
+                    <li><a href="./list_page.php" class="overlay-item">商品を探す</a></li>
                     <li><a href="#" class="overlay-item">特集一覧</a></li>
                     <li><a href="#" class="overlay-item">お気に入り</a></li>
                     <li><a href="#" class="overlay-item">ご利用ガイド</a></li>
@@ -101,11 +105,11 @@ if (isset($_POST['name'])) {
             </div>
 
             <ul class="menu-group" id="menu-group">
-                <a href="./index.html">
+                <a href="index.php">
                     <img src="./img/wine.svg" alt="ホームページロゴ" width="45px" height="45px">
                 </a>
                 <div>
-                    <li class="menu-item"><a href="./list_page.html">商品を探す</a></li>
+                    <li class="menu-item"><a href="./list_page.php">商品を探す</a></li>
                     <li class="menu-item"><a href="#">特集一覧</a></li>
                     <li class="menu-item"><a href="#">お気に入り</a></li>
                     <li class="menu-item"><a href="#">ご利用ガイド</a></li>
@@ -115,9 +119,24 @@ if (isset($_POST['name'])) {
                 <a href="./cart.php">
                     <img src="./img/cart.svg" alt="カート" width="25px" height="25px">
                 </a>
-                <a href="./register.php">
-                    <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">
-                </a>
+                <div class="dropdown-container">
+                    <button class="btn" id="btn">
+                        <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">
+                        <?php isset($user['name']) ? print $user['name'] . "さん" : print "アカウント"; ?>
+                        <i class="bx bx-chevron-down" id="arrow"></i>
+                    </button>
+
+                    <div class="dropdown" id="dropdown">
+                        <a href="./register.php">
+                            <i class="bx bx-plus-circle"></i>
+                            新規会員登録
+                        </a>
+                        <a href="<?php isset($_SESSION['user']) ? print "./logout.php" : print "login.php" ?>">
+                            <i class="bx bx-user"></i>
+                            <?php isset($_SESSION['user']) ? print "ログアウト" : print "ログイン"  ?>
+                        </a>
+                    </div>
+                </div>
             </ul>
         </nav>
     </header>

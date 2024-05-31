@@ -70,7 +70,7 @@ $stt->execute();
             <div class="register-title">
                 <h2>登録が完了しました</h2>
                 <h4>ご登録ありがとうございました。</h4>
-                <a href="./index.html">
+                <a href="./index.php">
                     <button class="btn-top">お買い物を続ける</button>
                 </a>
             </div>

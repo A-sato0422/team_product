@@ -17,6 +17,7 @@ body {
     font-family: "Zen Antique", serif;
 }
 
+
 section {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -61,8 +62,8 @@ img {
 /* header section */
 header {
     font-size: 1.6rem;
-    padding-top: 4rem !important;
-  }
+    padding-top: 6rem !important;
+}
 
 /* register.html用CSS */
 .register {
@@ -110,6 +111,7 @@ header {
     font-weight: bold;
 
 }
+
 .regi-conf .container {
     width: 60%;
     margin: 0 auto;
@@ -159,4 +161,9 @@ header {
     background: #ccc;
     padding: 4rem 5rem;
     text-align: center;
+}
+
+/* login.php用CSS */
+.submit {
+    margin-top: 3rem;
 }

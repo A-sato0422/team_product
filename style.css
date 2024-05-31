@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+body {
+  font-family: "Zen Antique", serif;
+}
+
 header {
   background-color: #fff;
   color: #333;
