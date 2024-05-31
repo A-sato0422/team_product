@@ -1,6 +1,9 @@
 <?php
 require_once "./encode.php";
 
+session_start();
+$user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
+
 $pName = e($_POST['p_name'] ?? '');
 $price = e($_POST['price'] ?? '');
 $count = e($_POST['count'] ?? '');
@@ -66,6 +69,7 @@ if (isset($_POST['p_name'])) {
 <link rel="stylesheet" href="./list_page.css">
 <link rel="stylesheet" href="./product.css">
 <link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./dropdown_UI.css">
 
 <body id="top" class="font-poppins">
 
@@ -101,7 +105,7 @@ if (isset($_POST['p_name'])) {
             </div>
 
             <ul class="menu-group" id="menu-group">
-                <a href="./index.php">
+                <a href="index.php">
                     <img src="./img/wine.svg" alt="ホームページロゴ" width="45px" height="45px">
                 </a>
                 <div>
@@ -115,13 +119,27 @@ if (isset($_POST['p_name'])) {
                 <a href="./cart.php">
                     <img src="./img/cart.svg" alt="カート" width="25px" height="25px">
                 </a>
-                <a href="./register.php">
-                    <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">
-                </a>
+                <div class="dropdown-container">
+                    <button class="btn" id="btn">
+                        <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">
+                        <?php isset($user['name']) ? print $user['name'] . "さん" : print "アカウント"; ?>
+                        <i class="bx bx-chevron-down" id="arrow"></i>
+                    </button>
+
+                    <div class="dropdown" id="dropdown">
+                        <a href="./register.php">
+                            <i class="bx bx-plus-circle"></i>
+                            新規会員登録
+                        </a>
+                        <a href="<?php isset($_SESSION['user']) ? print "./logout.php" : print "login.php" ?>">
+                            <i class="bx bx-user"></i>
+                            <?php isset($_SESSION['user']) ? print "ログアウト" : print "ログイン"  ?>
+                        </a>
+                    </div>
+                </div>
             </ul>
         </nav>
     </header>
-
     <!-- main section -->
     <main>
         <div class="main">

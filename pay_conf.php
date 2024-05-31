@@ -1,5 +1,7 @@
 <?php
 require_once "./encode.php";
+session_start();
+$user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
 
 $name = e($_POST['name'] ?? "");
 $mail = e($_POST['mail'] ?? "");
@@ -45,6 +47,7 @@ $address = e($_POST['address'] ?? "");
     <!-- css -->
     <link rel="stylesheet" href="./cart.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./dropdown_UI.css">
     <!-- icon -->
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 </head>
@@ -52,8 +55,6 @@ $address = e($_POST['address'] ?? "");
 <body>
     <header>
         <nav class="nav">
-            <!-- <input type="checkbox" id="menu-toggle" class="checkbox-visually-hidden"> -->
-            <!-- <p for="menu-toggle" class="menu-toggle-label">14時まで即日配送</p> -->
             <!-- スマホ用 menu icon -->
             <div class="menu">
                 <div class="nav-icon" id="menu-icon">
@@ -93,9 +94,24 @@ $address = e($_POST['address'] ?? "");
                 <a href="./cart.php">
                     <img src="./img/cart.svg" alt="カート" width="25px" height="25px">
                 </a>
-                <a href="./register.php">
-                    <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">
-                </a>
+                <div class="dropdown-container">
+                    <button class="btn" id="btn">
+                        <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">
+                        <?php isset($user['name']) ? print $user['name'] . "さん" : print "アカウント"; ?>
+                        <i class="bx bx-chevron-down" id="arrow"></i>
+                    </button>
+
+                    <div class="dropdown" id="dropdown">
+                        <a href="./register.php">
+                            <i class="bx bx-plus-circle"></i>
+                            新規会員登録
+                        </a>
+                        <a href="<?php isset($_SESSION['user']) ? print "./logout.php" : print "login.php" ?>">
+                            <i class="bx bx-user"></i>
+                            <?php isset($_SESSION['user']) ? print "ログアウト" : print "ログイン"  ?>
+                        </a>
+                    </div>
+                </div>
             </ul>
         </nav>
     </header>
@@ -148,6 +164,7 @@ $address = e($_POST['address'] ?? "");
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./main.js"></script>
 
+    <script src="main.js"></script>
 </body>
 
 </html>

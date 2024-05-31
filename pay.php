@@ -39,6 +39,8 @@ $user = $_SESSION['user'] ?? [];
     <!-- css -->
     <link rel="stylesheet" href="./cart.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./dropdown_UI.css">
+
     <!-- icon -->
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 </head>
@@ -47,7 +49,7 @@ $user = $_SESSION['user'] ?? [];
     <header>
         <nav class="nav">
             <!-- <input type="checkbox" id="menu-toggle" class="checkbox-visually-hidden"> -->
-            <!-- <p for="menu-toggle" class="menu-toggle-label">14時まで即日配送</p> -->
+            <!-- <label for="menu-toggle" class="menu-toggle-label">14時まで即日配送</label> -->
             <!-- スマホ用 menu icon -->
             <div class="menu">
                 <div class="nav-icon" id="menu-icon">
@@ -75,7 +77,7 @@ $user = $_SESSION['user'] ?? [];
             </div>
 
             <ul class="menu-group" id="menu-group">
-                <a href="./index.php">
+                <a href="index.php">
                     <img src="./img/wine.svg" alt="ホームページロゴ" width="45px" height="45px">
                 </a>
                 <li class="menu-item"><a href="./list_page.php">商品を探す</a></li>
@@ -87,9 +89,24 @@ $user = $_SESSION['user'] ?? [];
                 <a href="./cart.php">
                     <img src="./img/cart.svg" alt="カート" width="25px" height="25px">
                 </a>
-                <a href="./register.php">
-                    <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">
-                </a>
+                <div class="dropdown-container">
+                    <button class="btn" id="btn">
+                        <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">
+                        <?php isset($user['name']) ? print $user['name'] . "さん" : print "アカウント"; ?>
+                        <i class="bx bx-chevron-down" id="arrow"></i>
+                    </button>
+
+                    <div class="dropdown" id="dropdown">
+                        <a href="./register.php">
+                            <i class="bx bx-plus-circle"></i>
+                            新規会員登録
+                        </a>
+                        <a href="<?php isset($_SESSION['user']) ? print "./logout.php" : print "login.php" ?>">
+                            <i class="bx bx-user"></i>
+                            <?php isset($_SESSION['user']) ? print "ログアウト" : print "ログイン"  ?>
+                        </a>
+                    </div>
+                </div>
             </ul>
         </nav>
     </header>
@@ -105,23 +122,23 @@ $user = $_SESSION['user'] ?? [];
                     <div class="pay_form_container">
                         <div class="form-group">
                             <label for="name">お名前 *</label>
-                            <input type="text" id="name" name="name" value="<?= $user['name']; ?>" required>
+                            <input type="text" id="name" name="name" value="<?= $user['name'] ?? ''; ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="mail">Email *</label>
-                            <input type="mail" id="mail" name="mail" value="<?= $user['email']; ?>" required>
+                            <input type="mail" id="mail" name="mail" value="<?= $user['email'] ?? ''; ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="tel">電話番号(ハイフンなし) *</label>
-                            <input type="number" id="tel" name="tel" value="<?= $user['tel']; ?>" required>
+                            <input type="number" id="tel" name="tel" value="<?= $user['tel'] ?? ''; ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="">お届け先 *</label>
                             <div class="sub-group">
                                 <label for="postcode">郵便番号(ハイフンなし)</label>
-                                <input type="number" id="postcode" name="postcode" value="<?= $user['postcode']; ?>" required>
+                                <input type="number" id="postcode" name="postcode" value="<?= $user['postcode'] ?? ''; ?>" required>
                                 <label for="address">住所</label>
-                                <input type="text" id="address" name="address" value="<?= $user['address']; ?>" required>
+                                <input type="text" id="address" name="address" value="<?= $user['address'] ?? ''; ?>" required>
                             </div>
                         </div>
                         <button class="btn btn-blue" type="submit">購入する</button>

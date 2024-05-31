@@ -1,3 +1,22 @@
+<?php
+session_start();
+$user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
+
+// 画面上部にセッション情報を表示
+if ($user) {
+    echo $user['name'];
+    echo "<br>";
+    echo $user['email'];
+    echo "<br>";
+    echo $user['tel'];
+    echo "<br>";
+    echo $user['postcode'];
+    echo "<br>";
+    echo $user['address'];
+    echo "<br>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -63,7 +82,7 @@
                 <div class="dropdown-container">
                     <button class="btn" id="btn">
                         <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">
-                        アカウント
+                        <?php isset($user['name']) ? print $user['name'] . "さん" : print "アカウント"; ?>
                         <i class="bx bx-chevron-down" id="arrow"></i>
                     </button>
 
@@ -93,7 +112,7 @@
     </div>
 
     <div class="category1">
-        <span class="Liquorsearch">お酒を探す</span>  
+        <span class="Liquorsearch">お酒を探す</span>
         <ul>
             <li class="button01"></li>
             <li class="button02"></li>
@@ -105,7 +124,7 @@
             <li class="button08"></li>
             <li class="button09"></li>
 
-          
+
         </ul>
     </div>
     <div class="bestsellers-section">

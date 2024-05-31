@@ -1,3 +1,8 @@
+<?php
+session_start();
+$user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -21,6 +26,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./list_page.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./dropdown_UI.css">
 </head>
 
 <body id="top" class="font-poppins">
@@ -72,7 +78,7 @@
                 <div class="dropdown-container">
                     <button class="btn" id="btn">
                         <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">
-                        アカウント
+                        <?php isset($user['name']) ? print $user['name'] . "さん" : print "アカウント"; ?>
                         <i class="bx bx-chevron-down" id="arrow"></i>
                     </button>
 

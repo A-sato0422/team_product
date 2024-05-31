@@ -1,7 +1,3 @@
-<?php
-session_start();
-$user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
-?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -16,7 +12,7 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
 </head>
 
 <body>
-    <header>
+<header>
         <nav class="nav">
             <!-- <input type="checkbox" id="menu-toggle" class="checkbox-visually-hidden"> -->
             <!-- <label for="menu-toggle" class="menu-toggle-label">14時まで即日配送</label> -->
@@ -62,7 +58,7 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
                 <div class="dropdown-container">
                     <button class="btn" id="btn">
                         <img src="./img/user-solid.svg" alt="user" width="25px" height="25px">
-                        <?php isset($user['name']) ? print $user['name'] . "さん" : print "アカウント"; ?>
+                        アカウント
                         <i class="bx bx-chevron-down" id="arrow"></i>
                     </button>
 
@@ -84,15 +80,11 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
     <section class="register">
         <div class="container">
             <div class="register-title">
-                <h2>REGISTER</h2>
-                <h4>新規登録</h4>
+                <h2>LOGIN</h2>
+                <h4>ログイン</h4>
             </div>
 
-            <form method="POST" action="./regi_conf.php">
-                <div class="form-group">
-                    <label for="name">お名前 *</label><br>
-                    <input type="text" id="name" name="name" placeholder="山田 太郎" required>
-                </div>
+            <form method="POST" action="index.php">
                 <div class="form-group">
                     <label for="email">Email *</label><br>
                     <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
@@ -101,28 +93,13 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
                     <label for="password">パスワード *</label><br>
                     <input type="password" id="password" name="password" placeholder="8桁以上の半角英数字でお願いします" required>
                 </div>
-                <div class="form-group">
-                    <label for="tel">電話番号(ハイフンなし) *</label><br>
-                    <input type="number" id="tel" name="tel" placeholder="08011112222" required>
-                </div>
-                <div class="form-group">
-                    <label for="postcode">郵便番号(ハイフンなし) *</label><br>
-                    <input type="number" id="postcode" name="postcode" placeholder="0001234" required>
-                </div>
-                <div class="form-group">
-                    <label for="address">住所 *</label><br>
-                    <input type="text" id="address" name="address" placeholder="〇〇県○○市○○町1-1 ハイツ111号室" required>
-                </div>
-                <div class="form-group">
-                    <h4>地酒.comからのお知らせを受信しますか？</h4>
-                    <input type="hidden" class="dm" name="dm" value="受信しない">
-                    <input type="checkbox" class="dm" name="dm" value="受信する"><span class="select-value" checked>受信する</span>
-                </div>
-                <input type="submit" value="内容を確認する">
+               
+                <input type="submit" value="ログイン" class="submit">
             </form>
         </div>
     </section>
 
+    <script src="./main.js"></script>
 </body>
 
 </html>
