@@ -357,8 +357,10 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
             </div>
             <div class="cash">
                 <h2>お支払い方法</h2>
-                <p>SAKE People では下記のお支払い方法がご利用いただけます。</p>
+                <p>地酒.com では下記のお支払い方法がご利用いただけます。</p>
                 <div class="cash-icons">
+                    <img src="./img/支払方法.png" alt="">
+                    <!-- <div class="cash-icon">amazon</div>
                     <div class="cash-icon">amazon</div>
                     <div class="cash-icon">amazon</div>
                     <div class="cash-icon">amazon</div>
@@ -367,8 +369,7 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
                     <div class="cash-icon">amazon</div>
                     <div class="cash-icon">amazon</div>
                     <div class="cash-icon">amazon</div>
-                    <div class="cash-icon">amazon</div>
-                    <div class="cash-icon">amazon</div>
+                    <div class="cash-icon">amazon</div> -->
                 </div>
                 <ul>
                     <li>クレジットカード決済</li>

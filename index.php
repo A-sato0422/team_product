@@ -68,7 +68,7 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
 
             <ul class="menu-group" id="menu-group">
                 <a href="#">
-                    <img src="./img/wine.svg" alt="ホームページロゴ" width="45px" height="45px">
+                    <img src="./img/地酒.com 候補4.png" alt="ホームページロゴ" width="15%" height="15%">
                 </a>
                 <li class="menu-item"><a href="./list_page.php">商品を探す</a></li>
                 <li class="menu-item"><a href="#">特集一覧</a></li>
@@ -128,57 +128,57 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
         </ul>
     </div>
     <div class="bestsellers-section">
-        <h2>ベストセラー</h2>
+    <span class="bestseller">ベストセラー</span>
         <div class="product-container">
             <div class="product">
                 <img src="./img/wine1.webp" alt="商品1">
-                <p class="product-name">商品名1</p>
-                <p class="product-description">商品の説明1</p>
+                <p class="product-name">オーパス ワン 2017年 Opus One カリフォルニア 750ml 赤ワイン アメリカ</p>
+                <p class="product-description">\64000</p>
             </div>
             <div class="product">
                 <img src="./img/wine2.webp" alt="商品1">
-                <p class="product-name">商品名1</p>
-                <p class="product-description">商品の説明1</p>
+                <p class="product-name">オーバーチュア NV カリフォルニア 750ml 赤ワイン オーヴァチャー OVERTURE アメリカ ナパヴァレー</p>
+                <p class="product-description">\30000</p>
             </div>
             <div class="product">
                 <img src="./img/wine3.webp" alt="商品1">
-                <p class="product-name">商品名1</p>
-                <p class="product-description">商品の説明1</p>
+                <p class="product-name">ナパ ハイランズ カベルネ ソーヴィニヨン ナパ ヴァレー 2022 750ml 赤ワイン アメリカ カリフォルニア フルボディ</p>
+                <p class="product-description">\6400</p>
             </div>
             <div class="product">
                 <img src="./img/wine4.webp" alt="商品1">
-                <p class="product-name">商品名1</p>
-                <p class="product-description">商品の説明1</p>
+                <p class="product-name">ナパ ハイランズ カベルネ ソーヴィニヨン ナパ ヴァレー 2022 750ml 赤ワイン アメリカ カリフォルニア フルボディ</p>
+                <p class="product-description">\4000</p>
             </div>
             <div class="product">
                 <img src="./img/wine5.webp" alt="商品1">
-                <p class="product-name">商品名1</p>
-                <p class="product-description">商品の説明1</p>
+                <p class="product-name">オーパス ワン 2016年 Opus One カリフォルニア 750ml 赤ワイン アメリカ</p>
+                <p class="product-description">\45000</p>
             </div>
             <div class="product">
                 <img src="./img/wine6.webp" alt="商品1">
-                <p class="product-name">商品名1</p>
-                <p class="product-description">商品の説明1</p>
+                <p class="product-name">プピーユ 2017 750ml 赤ワイン フランス ボルドー フルボディ</p>
+                <p class="product-description">\4400</p>
             </div>
             <div class="product">
                 <img src="./img/wine7.webp" alt="商品1">
-                <p class="product-name">商品名1</p>
-                <p class="product-description">商品の説明1</p>
+                <p class="product-name">オーパス ワン 2018年 Opus One カリフォルニア 750ml 赤ワイン アメリカ</p>
+                <p class="product-description">\50000</p>
             </div>
             <div class="product">
                 <img src="./img/wine8.webp" alt="商品1">
-                <p class="product-name">商品名1</p>
-                <p class="product-description">商品の説明1</p>
+                <p class="product-name">ザ プリズナー ワイン カンパニー アンシャックルド カベルネ ソーヴィニヨン 2021 750ml 赤ワイン アメリカ カリフォルニア フルボディ</p>
+                <p class="product-description">\4270</p>
             </div>
             <div class="product">
                 <img src="./img/wine9.webp" alt="商品1">
-                <p class="product-name">商品名1</p>
-                <p class="product-description">商品の説明1</p>
+                <p class="product-name">689 セラーズ シックス エイト ナイン ナパ ヴァレー レッド 2020 750ml 赤ワイン アメリカ カリフォルニア フルボディ</p>
+                <p class="product-description">\3000</p>
             </div>
             <div class="product">
                 <img src="./img/wine10.webp" alt="商品1">
-                <p class="product-name">商品名1</p>
-                <p class="product-description">商品の説明1</p>
+                <p class="product-name">デコイ カベルネ ソーヴィニヨン カリフォルニア 2021 750ml 赤ワイン アメリカ カリフォルニア ミディアムボディ ダックホーン</p>
+                <p class="product-description">\2550</p>
             </div>
             <!-- 他の商品の情報をここに追加 -->
         </div>
@@ -209,6 +209,8 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
                 <h2>お支払い方法</h2>
                 <p>地酒.com では下記のお支払い方法がご利用いただけます。</p>
                 <div class="cash-icons">
+                    <img src="./img/支払方法.png" alt="">
+                    <!-- <div class="cash-icon">amazon</div>
                     <div class="cash-icon">amazon</div>
                     <div class="cash-icon">amazon</div>
                     <div class="cash-icon">amazon</div>
@@ -217,8 +219,7 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
                     <div class="cash-icon">amazon</div>
                     <div class="cash-icon">amazon</div>
                     <div class="cash-icon">amazon</div>
-                    <div class="cash-icon">amazon</div>
-                    <div class="cash-icon">amazon</div>
+                    <div class="cash-icon">amazon</div> -->
                 </div>
                 <ul>
                     <li>クレジットカード決済</li>
