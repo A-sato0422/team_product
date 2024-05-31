@@ -3,18 +3,18 @@ session_start();
 $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
 
 // 画面上部にセッション情報を表示
-if ($user) {
-    echo $user['name'];
-    echo "<br>";
-    echo $user['email'];
-    echo "<br>";
-    echo $user['tel'];
-    echo "<br>";
-    echo $user['postcode'];
-    echo "<br>";
-    echo $user['address'];
-    echo "<br>";
-}
+// if ($user) {
+//     echo $user['name'];
+//     echo "<br>";
+//     echo $user['email'];
+//     echo "<br>";
+//     echo $user['tel'];
+//     echo "<br>";
+//     echo $user['postcode'];
+//     echo "<br>";
+//     echo $user['address'];
+//     echo "<br>";
+// }
 ?>
 
 <!DOCTYPE html>
