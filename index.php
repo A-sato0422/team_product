@@ -114,15 +114,16 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
     <div class="category1">
         <span class="Liquorsearch">お酒を探す</span>
         <ul>
-            <li class="button01"></li>
-            <li class="button02"></li>
-            <li class="button03"></li>
-            <li class="button04"></li>
-            <li class="button05"></li>
-            <li class="button06"></li>
-            <li class="button07"></li>
-            <li class="button08"></li>
-            <li class="button09"></li>
+            <a href="./list_page.php"><li class="button01"></li></a>
+            <a href="./list_page.php"><li class="button02"></li></a>
+            <a href="./list_page.php"><li class="button03"></li></a>
+            <a href="./list_page.php"><li class="button04"></li></a>
+            <a href="./list_page.php"><li class="button05"></li></a>
+            <a href="./list_page.php"><li class="button06"></li></a>
+            <a href="./list_page.php"><li class="button07"></li></a>
+            <a href="./list_page.php"><li class="button08"></li></a>
+            <a href="./list_page.php"><li class="button09"></li></a>
+       
 
 
         </ul>
@@ -194,9 +195,9 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
                 </div>
                 <div class="footer-section">
                     <h3>リンク</h3>
-                    <p><a href="#">会社概要</a></p>
+                    <p><a href="./about.html">会社概要</a></p>
                     <p><a href="#">サービス</a></p>
-                    <p><a href="#">お問い合わせ</a></p>
+                    <p><a href="./contact.php">お問い合わせ</a></p>
                 </div>
                 <div class="footer-section">
                     <h3>フォローする</h3>
