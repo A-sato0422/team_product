@@ -67,7 +67,7 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
             </div>
 
             <ul class="menu-group" id="menu-group">
-                <a href="#">
+                <a href="index.php">
                     <img src="./img/地酒.com 候補4.png" alt="ホームページロゴ" width="15%" height="15%">
                 </a>
                 <li class="menu-item"><a href="./list_page.php">商品を探す</a></li>
