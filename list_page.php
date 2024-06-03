@@ -14,12 +14,9 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- font awesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- slickのCSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
@@ -167,28 +164,23 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
             <div class="item-field">
                 <div class="w-full">
                     <div class="grid grid-cols-2 lg:grid-cols-3 gap-7">
-                        <a href="./product.php"
-                            class="box w-full h-full relative transition-all duration-700 overflow-hidden">
-                            <img src="./products/sake01.webp" alt="日本酒①の画像"
-                                class="w-full h-72 rounded-md object-cover cursor-pointer">
+                        <a href="./product.php" class="box w-full h-full relative transition-all duration-700 overflow-hidden">
+                            <img src="./products/sake01.webp" alt="日本酒①の画像" class="w-full h-72 rounded-md object-cover cursor-pointer">
                             <div>
                                 <p class="item-title mt-4">ジェーン エア ジュヴレ シャンベルタン プルミエ クリュ レ コルボー 2021 750ml 赤ワイン フランス
                                     ブルゴーニュ ミディアムボディ</p>
                                 <p class="item-price font-bold text-3xl mt-4">¥32,000 （税込）</p>
                             </div>
                         </a>
-                        <a href="./product_02.php"
-                            class="box w-full h-full relative transition-all duration-700 overflow-hidden">
-                            <img src="./products/sake02.webp" alt="日本酒①の画像"
-                                class="w-full h-72 rounded-md object-cover cursor-pointer">
+                        <a href="./product_02.php" class="box w-full h-full relative transition-all duration-700 overflow-hidden">
+                            <img src="./img/wine4.webp" alt="日本酒①の画像" class="w-full h-72 rounded-md object-cover cursor-pointer">
                             <div>
                                 <p class="item-title mt-4">ジェーン エア ジュヴレ シャンベルタン 2020 750ml 赤ワイン フランス ブルゴーニュ ミディアムボディ</p>
                                 <p class="item-price font-bold text-3xl mt-4">¥11,800 （税込）</p>
                             </div>
                         </a>
                         <a href="#" class="box w-full h-full relative transition-all duration-700 overflow-hidden">
-                            <img src="./products/sake03.webp" alt="日本酒①の画像"
-                                class="w-full h-72 rounded-md object-cover cursor-pointer">
+                            <img src="./products/sake03.webp" alt="日本酒①の画像" class="w-full h-72 rounded-md object-cover cursor-pointer">
                             <div>
                                 <p class="item-title mt-4">ドメーヌ アラン ビュルゲ ジュヴレ シャンベルタン メ ファヴォリット ヴィエイユ ヴィーニュ 2021 750ml
                                     赤ワイン フランス ブルゴーニュ ミディアムボディ</p>
@@ -196,48 +188,42 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
                             </div>
                         </a>
                         <a href="#" class="box w-full h-full relative transition-all duration-700 overflow-hidden">
-                            <img src="./products/sake04.webp" alt="日本酒①の画像"
-                                class="w-full h-72 rounded-md object-cover cursor-pointer">
+                            <img src="./products/sake04.webp" alt="日本酒①の画像" class="w-full h-72 rounded-md object-cover cursor-pointer">
                             <div>
                                 <p class="item-title mt-4">[母の日ギフト] サッシカイア グイダルベルト ＆ Zalto ワイングラス ギフトセット</p>
                                 <p class="item-price font-bold text-3xl mt-4">¥15,000 （税込）</p>
                             </div>
                         </a>
                         <a href="#" class="box w-full h-full relative transition-all duration-700 overflow-hidden">
-                            <img src="./products/sake12.webp" alt="日本酒①の画像"
-                                class="w-full h-72 rounded-md object-cover cursor-pointer">
+                            <img src="./products/sake12.webp" alt="日本酒①の画像" class="w-full h-72 rounded-md object-cover cursor-pointer">
                             <div>
                                 <p class="item-title mt-4">[母の日ギフト] ドメーヌ ルージョ サン ロマン＆木村硝子店 サヴァ 12oz ワイングラス ギフトセット</p>
                                 <p class="item-price font-bold text-3xl mt-4">¥9,500 （税込）</p>
                             </div>
                         </a>
                         <a href="#" class="box w-full h-full relative transition-all duration-700 overflow-hidden">
-                            <img src="./products/sake06.webp" alt="日本酒①の画像"
-                                class="w-full h-72 rounded-md object-cover cursor-pointer">
+                            <img src="./products/sake06.webp" alt="日本酒①の画像" class="w-full h-72 rounded-md object-cover cursor-pointer">
                             <div>
                                 <p class="item-title mt-4">イニスキリン ゴールド ヴィダル アイスワイン 2019 375ml 箱付 白ワイン カナダ オンタリオ 甘口</p>
                                 <p class="item-price font-bold text-3xl mt-4">¥12,000 （税込）</p>
                             </div>
                         </a>
                         <a href="#" class="box w-full h-full relative transition-all duration-700 overflow-hidden">
-                            <img src="./products/sake07.webp" alt="日本酒①の画像"
-                                class="w-full h-72 rounded-md object-cover cursor-pointer">
+                            <img src="./products/sake07.webp" alt="日本酒①の画像" class="w-full h-72 rounded-md object-cover cursor-pointer">
                             <div>
                                 <p class="item-title mt-4">ドメーヌ シャンソン シャブリ 2022 750ml 白ワイン フランス ブルゴーニュ 辛口</p>
                                 <p class="item-price font-bold text-3xl mt-4">¥4,200 （税込）</p>
                             </div>
                         </a>
                         <a href="#" class="box w-full h-full relative transition-all duration-700 overflow-hidden">
-                            <img src="./products/sake08.webp" alt="日本酒①の画像"
-                                class="w-full h-72 rounded-md object-cover cursor-pointer">
+                            <img src="./products/sake08.webp" alt="日本酒①の画像" class="w-full h-72 rounded-md object-cover cursor-pointer">
                             <div>
                                 <p class="item-title mt-4">シャトー ローザン セグラ 2021 750ml 赤ワイン フランス ボルドー フルボディ</p>
                                 <p class="item-price font-bold text-3xl mt-4">¥15,800 （税込）</p>
                             </div>
                         </a>
                         <a href="#" class="box w-full h-full relative transition-all duration-700 overflow-hidden">
-                            <img src="./products/sake09.webp" alt="日本酒①の画像"
-                                class="w-full h-72 rounded-md object-cover cursor-pointer">
+                            <img src="./products/sake09.webp" alt="日本酒①の画像" class="w-full h-72 rounded-md object-cover cursor-pointer">
                             <div>
                                 <p class="item-title mt-4">ドメーヌ ドルーアン ラローズ ラトリシエール シャンベルタン グラン クリュ 2021 750ml 赤ワイン フランス
                                     ブルゴーニュ ミディアムフルボディ</p>
@@ -245,8 +231,7 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
                             </div>
                         </a>
                         <a href="#" class="box w-full h-full relative transition-all duration-700 overflow-hidden">
-                            <img src="./products/sake10.webp" alt="日本酒①の画像"
-                                class="w-full h-72 rounded-md object-cover cursor-pointer">
+                            <img src="./products/sake10.webp" alt="日本酒①の画像" class="w-full h-72 rounded-md object-cover cursor-pointer">
                             <div>
                                 <p class="item-title mt-4">ドメーヌ ドルーアン ラローズ シャンベルタン クロ ド ベーズ グラン クリュ 2021 750ml 赤ワイン フランス
                                     ブルゴーニュ フルボディ</p>
@@ -254,8 +239,7 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
                             </div>
                         </a>
                         <a href="#" class="box w-full h-full relative transition-all duration-700 overflow-hidden">
-                            <img src="./products/sake11.webp" alt="日本酒①の画像"
-                                class="w-full h-72 rounded-md object-cover cursor-pointer">
+                            <img src="./products/sake11.webp" alt="日本酒①の画像" class="w-full h-72 rounded-md object-cover cursor-pointer">
                             <div>
                                 <p class="item-title mt-4">ジェーン エア ジュヴレ シャンベルタン プルミエ クリュ レ コルボー 2021 750ml 赤ワイン フランス
                                     ブルゴーニュ ミディアムボディ</p>
@@ -263,8 +247,7 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
                             </div>
                         </a>
                         <a href="#" class="box w-full h-full relative transition-all duration-700 overflow-hidden">
-                            <img src="./products/sake05.webp" alt="日本酒①の画像"
-                                class="w-full h-72 rounded-md object-cover cursor-pointer">
+                            <img src="./products/sake05.webp" alt="日本酒①の画像" class="w-full h-72 rounded-md object-cover cursor-pointer">
                             <div>
                                 <p class="item-title mt-4">谷川岳 源水吟醸 15% 正規品 1800ml 永井酒造 箱なし 日本酒</p>
                                 <p class="item-price font-bold text-3xl mt-4">¥2,200 （税込）</p>
@@ -295,16 +278,14 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
             <h2>最近チェックした商品</h2>
             <div class="grid grid-cols-3 lg:grid-cols-4 gap-5">
                 <a href="#" class="w-full h-full relative transition-all duration-700 overflow-hidden">
-                    <img src="./products/sake01.webp" alt="日本酒①の画像"
-                        class="w-full h-72 rounded-md object-cover cursor-pointer">
+                    <img src="./products/sake01.webp" alt="日本酒①の画像" class="w-full h-72 rounded-md object-cover cursor-pointer">
                     <div>
                         <p class="item-title mt-4">谷川岳 源水吟醸 15% 正規品 1800ml 永井酒造 箱なし 日本酒</p>
                         <p class="item-price font-bold text-3xl mt-4">¥2,200 （税込）</p>
                     </div>
                 </a>
                 <a href="#" class="w-full h-full relative transition-all duration-700 overflow-hidden">
-                    <img src="./products/sake02.webp" alt="日本酒①の画像"
-                        class="w-full h-72 rounded-md object-cover cursor-pointer">
+                    <img src="./products/sake02.webp" alt="日本酒①の画像" class="w-full h-72 rounded-md object-cover cursor-pointer">
                     <div>
                         <p class="item-title mt-4">ジェーン エア ジュヴレ シャンベルタン プルミエ クリュ レ コルボー 2021 750ml 赤ワイン フランス
                             ブルゴーニュ ミディアムボディ</p>
@@ -312,16 +293,14 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
                     </div>
                 </a>
                 <a href="#" class="w-full h-full relative transition-all duration-700 overflow-hidden">
-                    <img src="./products/sake03.webp" alt="日本酒①の画像"
-                        class="w-full h-72 rounded-md object-cover cursor-pointer">
+                    <img src="./products/sake03.webp" alt="日本酒①の画像" class="w-full h-72 rounded-md object-cover cursor-pointer">
                     <div>
                         <p class="item-title mt-4">ジェーン エア ジュヴレ シャンベルタン 2020 750ml 赤ワイン フランス ブルゴーニュ ミディアムボディ</p>
                         <p class="item-price font-bold text-3xl mt-4">¥11,800 （税込）</p>
                     </div>
                 </a>
                 <a href="#" class="w-full h-full relative transition-all duration-700 overflow-hidden">
-                    <img src="./products/sake04.webp" alt="日本酒①の画像"
-                        class="w-full h-72 rounded-md object-cover cursor-pointer">
+                    <img src="./products/sake04.webp" alt="日本酒①の画像" class="w-full h-72 rounded-md object-cover cursor-pointer">
                     <div>
                         <p class="item-title mt-4">ドメーヌ アラン ビュルゲ ジュヴレ シャンベルタン メ ファヴォリット ヴィエイユ ヴィーニュ 2021 750ml
                             赤ワイン フランス ブルゴーニュ ミディアムボディ</p>
@@ -395,8 +374,7 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : [];
     </footer>
 
     <!-- top button -->
-    <a href="#top"
-        class="bg-theme hover:bg-selected-text transition-all duration-300 text-white lg:hidden fixed bottom-2 right-2 flex items-center justify-center w-14 h-14 p-5 rounded-full cursor-pointer">^</a>
+    <a href="#top" class="bg-theme hover:bg-selected-text transition-all duration-300 text-white lg:hidden fixed bottom-2 right-2 flex items-center justify-center w-14 h-14 p-5 rounded-full cursor-pointer">^</a>
 
     <!-- jQuery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
